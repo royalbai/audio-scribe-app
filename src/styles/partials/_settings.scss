@@ -1,0 +1,26 @@
+.settings {
+    padding-bottom: 300px;
+
+    h2 {
+        border-bottom: 1px solid black;
+    }
+
+    form {
+        margin-top: 25px;
+    }
+
+    label {
+        display: block;
+    }
+
+    i {
+        margin-left: 15px;
+    }
+}
+
+.submit {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 5px 10px;
+}

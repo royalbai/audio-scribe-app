@@ -1,0 +1,36 @@
+.journaling {
+    p {
+        text-align: center;
+    }
+
+    input {
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid black;
+        padding-top: 10px;
+    }
+
+    h3 {
+        font-size: 3rem;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    button {
+        display: block;
+        margin: 0 auto;
+        padding: 5px;
+        margin-top: 10px;
+    }
+
+    ul {
+        li {
+            margin: 10px 0;
+        }
+
+        p {
+            margin: 10px 0;
+            text-align: start;
+        }
+    }
+}
