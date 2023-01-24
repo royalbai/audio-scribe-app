@@ -1,0 +1,110 @@
+@media (min-width: 940px) {
+    .wrapper {
+        width: 40%;
+    }
+
+    .navHeader {
+        display: none;
+    }
+
+    .mobileNav {
+        display: block;
+        position: absolute;
+        width: 20%;
+        height: 92.7vh;
+        z-index: 20;
+        background-color: lightseagreen;
+
+        ul {
+            flex-direction: column;
+            padding-top: 10px;
+        }
+
+        li {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            padding-left: 50px;
+
+            a {
+                padding: 20px;
+                border-radius: 25px;
+
+                &:hover,
+                &:focus {
+                    background-color: royalblue;
+                }
+            }
+
+            i {
+                margin-right: 20px;
+            }
+
+            div {
+                text-align: left;
+            }
+        }
+
+        ul li:nth-child(1) {
+            border: 1px solid black;
+            border-radius: 15px;
+            width: 70%;
+            margin: 0 auto;
+            margin-bottom: 100px;
+            padding: 10px;
+        }
+
+        p {
+            font-size: 1rem;
+            width: 100%;
+        }
+    }
+
+    .calendar {
+        display: block;
+        position: absolute;
+        top: 68px;
+        right: 0;
+        width: 20%;
+        height: 92.7vh;
+        padding: 50px;
+        background-color: lightgoldenrodyellow;
+        z-index: 30;
+    }
+
+    .customCalendar {
+        width: 300px;
+        height: 300px;
+        border: 2px solid #333;
+        border-radius: 10px;
+    }
+
+    .customCalendar .react-calendar__month-view__weekdays {
+        background-color: #ddd;
+    }
+
+    .customCalendar .react-calendar__tile {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .customCalendar .react-calendar__tile:hover {
+        background-color: #eee;
+        cursor: pointer;
+    }
+
+    .customCalendar .react-calendar__tile--active {
+        background-color: #333;
+        color: #fff;
+    }
+
+    .calButton {
+        background-color: transparent;
+        padding: 10px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 30px;
+        border-radius: 25px;
+    }
+}
