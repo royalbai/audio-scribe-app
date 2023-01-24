@@ -473,6 +473,7 @@ h1 {
 
 .journaling p {
   text-align: center;
+  margin: 20px 0;
 }
 .journaling input {
   width: 100%;
@@ -482,14 +483,25 @@ h1 {
 }
 .journaling h3 {
   font-size: 3rem;
-  text-align: center;
-  padding: 20px 0;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border: none;
+  border-radius: 50%;
+  box-shadow: -10px 10px 15px 10px rgba(0, 0, 0, 0.5);
 }
 .journaling button {
   display: block;
   margin: 0 auto;
   padding: 5px;
   margin-top: 10px;
+  background-color: transparent;
+  border-radius: 15px;
+  border: 1px solid black;
+  margin-top: 40px;
 }
 .journaling ul li {
   margin: 10px 0;
@@ -497,6 +509,19 @@ h1 {
 .journaling ul p {
   margin: 10px 0;
   text-align: start;
+}
+
+.transcript {
+  min-height: 40vh;
+  background-color: royalblue;
+}
+
+.fa-microphone-lines-slash {
+  color: gray;
+}
+
+.fa-microphone-lines {
+  color: darkgreen;
 }
 
 .settings {
