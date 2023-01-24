@@ -21,8 +21,8 @@ function App() {
           <CustomCalendar />
         </header>
         <Routes>
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
+          {/* <Route path="/signin" element={<SignIn />} /> */}
+          {/* <Route path="/signup" element={<SignUp />} /> */}
           <Route path="/" element={<Home />} />
           <Route path="/journaling" element={<Journaling />} />
           <Route path="/savednotes" element={<SavedNotes />} />
