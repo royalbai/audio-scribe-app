@@ -1,20 +1,27 @@
 import React, { useRef, useState }from "react";
 import { Link } from "react-router-dom";
+import CustomCalendar from "./Calendar";
 
 function Nav() {
     const [currentPage, setCurrentPage] = useState("Home");
     const mobileMenuIconRef = useRef(null);
     const mobileMenuDropdownRef = useRef(null);
+    const calendarDropRef = useRef(null);
 
     const handleMobileMenuIconClick = () => {
         mobileMenuIconRef.current.classList.toggle("active");
         mobileMenuDropdownRef.current.classList.toggle("active");
+        
     }
 
     const handleLinkClick = (page) => {
         mobileMenuDropdownRef.current.classList.remove("active");
         mobileMenuIconRef.current.classList.remove("active");
         setCurrentPage(page);
+    }
+
+    const handleCalendarClick = () => {
+        calendarDropRef.current.classList.toggle("active");
     }
 
     return (
@@ -25,7 +32,8 @@ function Nav() {
                 </button>
                 <p>{currentPage}</p>
                 <i className="fa-solid fa-magnifying-glass"></i>
-                <i className="fa-regular fa-calendar"></i>
+                <CustomCalendar calendarDrop={calendarDropRef}/>
+                <i className="fa-regular fa-calendar" onClick={handleCalendarClick}></i>
             </div>
             <nav className="mobileNav" ref={mobileMenuDropdownRef}>
                 <ul>

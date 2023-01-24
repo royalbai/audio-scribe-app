@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -302,4 +303,321 @@ h1 {
   margin: 0;
   padding: 10px 0;
   background-color: lightblue;
+}
+
+.navHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  background-color: lightsalmon;
+}
+.navHeader p {
+  margin-left: 5%;
+  width: 50%;
+}
+.navHeader i {
+  width: 10%;
+  margin-left: 5%;
+}
+
+.burgerIcon {
+  display: block;
+  width: 25px;
+  margin-left: 5%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 30;
+}
+.burgerIcon .navBar, .burgerIcon:before, .burgerIcon:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: black;
+  border-radius: 100px;
+  margin: 5px 0;
+  transition: 0.5s;
+}
+
+.burgerIcon.active:before {
+  transform: rotate(45deg) translate(6px, 7.2px);
+}
+.burgerIcon.active:after {
+  transform: rotate(-45deg) translate(7px, -8px);
+}
+.burgerIcon.active .navBar {
+  opacity: 0;
+}
+
+.mobileNav {
+  display: none;
+}
+
+.mobileNav.active {
+  display: block;
+  position: absolute;
+  top: 67px;
+  width: 90%;
+  height: 300px;
+  z-index: 20;
+  background-color: lightseagreen;
+  border: 1px solid black;
+}
+.mobileNav.active ul {
+  flex-direction: column;
+  padding-top: 10px;
+}
+.mobileNav.active li {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding: 20px 50px;
+}
+.mobileNav.active li:hover, .mobileNav.active li:focus {
+  background-color: royalblue;
+}
+.mobileNav.active li i {
+  margin-right: 20px;
+}
+.mobileNav.active li div {
+  text-align: left;
+}
+.mobileNav.active ul li:nth-child(1) {
+  border: 1px solid black;
+  border-radius: 15px;
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+}
+.mobileNav.active ul li:nth-child(1):hover, .mobileNav.active ul li:nth-child(1):focus {
+  background-color: transparent;
+}
+.mobileNav.active p {
+  font-size: 1rem;
+  width: 100%;
+}
+
+.calendar {
+  display: none;
+}
+
+.calendar.active {
+  display: block;
+  position: absolute;
+  top: 113px;
+  right: 0;
+  background-color: lightgoldenrodyellow;
+  z-index: 30;
+}
+.calendar.active .customCalendar {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+.calendar.active .customCalendar .react-calendar__month-view__weekdays {
+  background-color: #ddd;
+}
+.calendar.active .customCalendar .react-calendar__tile {
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+.calendar.active .customCalendar .react-calendar__tile:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+.calendar.active .customCalendar .react-calendar__tile--active {
+  background-color: #333;
+  color: #fff;
+}
+.calendar.active .calButton {
+  background-color: transparent;
+  padding: 10px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 30px;
+  border-radius: 25px;
+}
+
+.homepage a {
+  display: flex;
+  justify-content: center;
+}
+.homepage button {
+  background-color: white;
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+.homepage div {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: lightgray;
+}
+.homepage div h4 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.homepage div ul {
+  list-style: "🚀";
+  list-style-position: inside;
+}
+.homepage div p,
+.homepage div li {
+  margin-bottom: 10px;
+}
+
+.journaling p {
+  text-align: center;
+}
+.journaling input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid black;
+  padding-top: 10px;
+}
+.journaling h3 {
+  font-size: 3rem;
+  text-align: center;
+  padding: 20px 0;
+}
+.journaling button {
+  display: block;
+  margin: 0 auto;
+  padding: 5px;
+  margin-top: 10px;
+}
+.journaling ul li {
+  margin: 10px 0;
+}
+.journaling ul p {
+  margin: 10px 0;
+  text-align: start;
+}
+
+.settings {
+  padding-bottom: 300px;
+}
+.settings h2 {
+  border-bottom: 1px solid black;
+}
+.settings form {
+  margin-top: 25px;
+}
+.settings label {
+  display: block;
+}
+.settings i {
+  margin-left: 15px;
+}
+
+.submit {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 5px 10px;
+}
+
+footer {
+  background-color: lightgreen;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 940px) {
+  .wrapper {
+    width: 40%;
+  }
+  .navHeader {
+    display: none;
+  }
+  .mobileNav {
+    display: block;
+    position: absolute;
+    width: 20%;
+    height: 92.7vh;
+    z-index: 20;
+    background-color: lightseagreen;
+  }
+  .mobileNav ul {
+    flex-direction: column;
+    padding-top: 10px;
+  }
+  .mobileNav li {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+  }
+  .mobileNav li a {
+    padding: 20px;
+    border-radius: 25px;
+  }
+  .mobileNav li a:hover, .mobileNav li a:focus {
+    background-color: royalblue;
+  }
+  .mobileNav li i {
+    margin-right: 20px;
+  }
+  .mobileNav li div {
+    text-align: left;
+  }
+  .mobileNav ul li:nth-child(1) {
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    padding: 10px;
+  }
+  .mobileNav p {
+    font-size: 1rem;
+    width: 100%;
+  }
+  .calendar {
+    display: block;
+    position: absolute;
+    top: 68px;
+    right: 0;
+    width: 20%;
+    height: 92.7vh;
+    padding: 50px;
+    background-color: lightgoldenrodyellow;
+    z-index: 30;
+  }
+  .customCalendar {
+    width: 300px;
+    height: 300px;
+    border: 2px solid #333;
+    border-radius: 10px;
+  }
+  .customCalendar .react-calendar__month-view__weekdays {
+    background-color: #ddd;
+  }
+  .customCalendar .react-calendar__tile {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .customCalendar .react-calendar__tile:hover {
+    background-color: #eee;
+    cursor: pointer;
+  }
+  .customCalendar .react-calendar__tile--active {
+    background-color: #333;
+    color: #fff;
+  }
+  .calButton {
+    background-color: transparent;
+    padding: 10px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    border-radius: 25px;
+  }
 }/*# sourceMappingURL=styles.css.map */

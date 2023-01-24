@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 
-function CustomCalendar() {
+function CustomCalendar({calendarDrop}) {
     const [date, setDate] = useState(new Date());
 
     const onChange = date => {
@@ -9,7 +9,7 @@ function CustomCalendar() {
     }
 
     return (
-        <div className='calendar'>
+        <div ref={calendarDrop} className='calendar' >
             <Calendar
                 defaultActiveStartDate={new Date()}
                 onChange={onChange}

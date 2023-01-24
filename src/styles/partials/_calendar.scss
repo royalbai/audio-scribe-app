@@ -1,3 +1,48 @@
 .calendar {
     display: none;
 }
+
+.calendar.active {
+    display: block;
+    position: absolute;
+    top: 113px;
+    right: 0;
+    background-color: lightgoldenrodyellow;
+    z-index: 30;
+
+    .customCalendar {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+    
+        .customCalendar .react-calendar__month-view__weekdays {
+            background-color: #ddd;
+        }
+    
+        .customCalendar .react-calendar__tile {
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+    
+        .customCalendar .react-calendar__tile:hover {
+            background-color: #eee;
+            cursor: pointer;
+        }
+    
+        .customCalendar .react-calendar__tile--active {
+            background-color: #333;
+            color: #fff;
+        }
+    
+        .calButton {
+            background-color: transparent;
+            padding: 10px;
+            display: block;
+            margin: 0 auto;
+            margin-top: 30px;
+            border-radius: 25px;
+        }
+}
