@@ -412,7 +412,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   padding: 5px 0;
-  background-color: lightsalmon;
+  background-color: white;
 }
 .navHeader p {
   margin-left: 5%;
@@ -437,7 +437,7 @@ h1 {
   display: block;
   width: 100%;
   height: 5px;
-  background-color: black;
+  background-color: #232323;
   border-radius: 100px;
   margin: 5px 0;
   transition: 0.5s;
@@ -460,46 +460,36 @@ h1 {
 .mobileNav.active {
   display: block;
   position: absolute;
-  top: 67px;
-  width: 90%;
-  height: 300px;
+  top: 69px;
+  width: 250px;
+  height: 400px;
   z-index: 20;
-  background-color: lightseagreen;
-  border: 1px solid black;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
 }
 .mobileNav.active ul {
-  flex-direction: column;
-  padding-top: 10px;
+  padding-top: 60px;
 }
 .mobileNav.active li {
-  width: 100%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  padding: 20px 50px;
-}
-.mobileNav.active li:hover, .mobileNav.active li:focus {
-  background-color: royalblue;
-}
-.mobileNav.active li i {
-  margin-right: 20px;
-}
-.mobileNav.active li div {
-  text-align: left;
-}
-.mobileNav.active ul li:nth-child(1) {
-  border: 1px solid black;
-  border-radius: 15px;
-  width: 70%;
-  margin: 0 auto;
-  padding: 10px;
-}
-.mobileNav.active ul li:nth-child(1):hover, .mobileNav.active ul li:nth-child(1):focus {
-  background-color: transparent;
+  margin: 20px 10px;
 }
 .mobileNav.active p {
   font-size: 1rem;
   width: 100%;
+}
+.mobileNav.active i {
+  width: 50px;
+  display: inline-block;
+  text-align: center;
+}
+.mobileNav.active a {
+  display: block;
+  padding: 10px;
+}
+.mobileNav.active a:hover, .mobileNav.active a:focus {
+  background-color: #006151;
+  color: white;
 }
 
 .calendar {
