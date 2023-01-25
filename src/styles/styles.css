@@ -270,6 +270,14 @@ img {
 
 button {
   cursor: pointer;
+  background-color: #006151;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+button:hover, button:focus {
+  background-color: white;
+  color: #006151;
 }
 
 .wrapper {
@@ -280,10 +288,12 @@ button {
 
 .App {
   min-height: 100vh;
+  background-color: rgb(240, 240, 240);
 }
 
 html {
   font-size: 125%;
+  color: #232323;
 }
 
 ul {
@@ -309,10 +319,10 @@ header {
 
 h1 {
   text-align: center;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid lightgray;
   margin: 0;
   padding: 10px 0;
-  background-color: lightblue;
+  background-color: white;
 }
 
 .navHeader {
@@ -558,7 +568,7 @@ h1 {
 }
 
 footer {
-  background-color: lightgreen;
+  font-size: 0.6rem;
   padding: 10px;
   text-align: center;
   width: 100%;
@@ -655,4 +665,18 @@ footer {
     margin-top: 30px;
     border-radius: 25px;
   }
+}
+.webPage img {
+  width: 100%;
+  margin: 0 auto;
+}
+.webPage h2 {
+  margin: 50px 0;
+}
+.webPage button {
+  display: flex;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 100px;
 }/*# sourceMappingURL=styles.css.map */

@@ -9,6 +9,16 @@ img {
 
 button {
     cursor: pointer;
+    background-color: #006151;
+    color: white;
+    border: none;
+    border-radius: 10px;
+
+    &:hover,
+    &:focus {
+        background-color: white;
+        color: #006151;
+    }
 }
 
 .wrapper {
@@ -19,4 +29,5 @@ button {
 
 .App {
     min-height: 100vh;
+    background-color: rgb(240, 240, 240) ;
 }
