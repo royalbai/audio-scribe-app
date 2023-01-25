@@ -12,13 +12,18 @@ button {
     background-color: #006151;
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
 
     &:hover,
     &:focus {
         background-color: white;
         color: #006151;
     }
+}
+
+input {
+    background-color: transparent;
+
 }
 
 .wrapper {
@@ -28,6 +33,6 @@ button {
 }
 
 .App {
-    min-height: 100vh;
+    min-height: 900px;
     background-color: rgb(240, 240, 240) ;
 }

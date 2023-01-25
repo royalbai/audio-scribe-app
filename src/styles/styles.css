@@ -273,11 +273,15 @@ button {
   background-color: #006151;
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 button:hover, button:focus {
   background-color: white;
   color: #006151;
+}
+
+input {
+  background-color: transparent;
 }
 
 .wrapper {
@@ -287,8 +291,86 @@ button:hover, button:focus {
 }
 
 .App {
-  min-height: 100vh;
+  min-height: 900px;
   background-color: rgb(240, 240, 240);
+}
+
+.webPage img {
+  width: 100%;
+  margin: 0 auto;
+}
+.webPage h2 {
+  margin: 50px 0;
+}
+.webPage button {
+  display: flex;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.signUp h2 {
+  text-align: center;
+  margin: 50px 0;
+}
+.signUp input {
+  width: 250px;
+  display: flex;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #232323;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.signUp button {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+}
+.signUp p {
+  margin: 40px 0;
+}
+.signUp a {
+  color: #006151;
+}
+.signUp span {
+  text-decoration: underline;
+}
+
+.signIn h2 {
+  text-align: center;
+  margin: 50px 0;
+}
+.signIn input {
+  width: 250px;
+  display: flex;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #232323;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.signIn button {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+}
+.signIn p {
+  margin: 40px 0;
+  text-align: center;
+}
+.signIn a {
+  color: #006151;
+}
+.signIn span {
+  display: block;
 }
 
 html {
@@ -568,6 +650,7 @@ h1 {
 }
 
 footer {
+  background-color: rgb(240, 240, 240);
   font-size: 0.6rem;
   padding: 10px;
   text-align: center;
@@ -665,18 +748,4 @@ footer {
     margin-top: 30px;
     border-radius: 25px;
   }
-}
-.webPage img {
-  width: 100%;
-  margin: 0 auto;
-}
-.webPage h2 {
-  margin: 50px 0;
-}
-.webPage button {
-  display: flex;
-  margin: 0 auto;
-  padding: 20px;
-  margin-top: 50px;
-  margin-bottom: 100px;
 }/*# sourceMappingURL=styles.css.map */

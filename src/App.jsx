@@ -16,8 +16,8 @@ function App() {
   const location = useLocation();
 
   return (
-    <div className="App">
-      <div>
+    <div >
+      <div className="App">
         <header>
           <h1>Audio Scribe</h1>
           {!['/webpage','/signin','/signup'].includes(location.pathname) && <Nav />}

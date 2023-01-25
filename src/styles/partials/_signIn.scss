@@ -1,0 +1,38 @@
+.signIn {
+    h2 {
+            text-align: center;
+            margin: 50px 0;
+        }
+    
+        input {
+            width: 250px;
+            display: flex;
+            margin: 0 auto;
+            padding: 10px;
+            border: 1px solid #232323;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    
+        button {
+            width: 250px;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 10px;
+            text-align: center;
+        }
+    
+        p {
+            margin: 40px 0;
+            text-align: center;
+        }
+    
+        a {
+            color: #006151;
+        }
+
+        span {
+            display: block;
+        }
+}

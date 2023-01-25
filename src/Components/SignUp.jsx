@@ -25,22 +25,22 @@ function SignUp() {
     // };
 
     return (
-        <div>
-            <div className="instructions">
-                <h2>Sign up for account</h2>
-                <p>Already have an account? <Link to="/">Sign in</Link></p>
-            </div>
+        <div className="signUp wrapper">
+            <h2>Join Audio Scribe</h2>
             <form className="infoEntry" /* onSubmit={handleSubmit} */>
                 <div>
-                    <label htmlFor="">Email Address</label>
-                    <input onChange={(e) => setEmail(e.target.value)} type="email" />
+                    <input placeholder="Name" onChange={(e) => setEmail(e.target.value)} type="text" />
                 </div>
                 <div>
-                    <label htmlFor="">Enter Password</label>
-                    <input onChange={(e) => setPassword(e.target.value)} type="password" />
+                    <input placeholder="Email" onChange={(e) => setEmail(e.target.value)} type="email" />
                 </div>
-                <button>Sign Up</button>
+                <div>
+                    <input placeholder="Password" onChange={(e) => setPassword(e.target.value)} type="password" />
+                </div>
+                <button>Create account</button>
             </form>
+            <p>Already have an account? <Link to="/signin">Sign in</Link></p>
+            <p>By signing-up with Joice you agree to the <span>Terms of Service and Privacy Policy.</span></p>
         </div>
     );
 };
