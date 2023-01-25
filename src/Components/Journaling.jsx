@@ -3,7 +3,7 @@ import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognitio
 
 function Journaling() {
 
-    const { transcript, listening, resetTranscript, browserSupportsSpeechRecognition } = useSpeechRecognition();
+    const { transcript, listening, resetTranscript, browserSupportsSpeechRecognition, isMicrophoneAvailable } = useSpeechRecognition();
     const [isListening, setIsListening] = useState(false);
     const [journals, setJournals] = useState([]);
     const [title, setTitle] = useState("");
@@ -11,6 +11,10 @@ function Journaling() {
 
     if (!browserSupportsSpeechRecognition) {
         return <span>Browser does not support speech recognition</span>;
+    }
+
+    if (!isMicrophoneAvailable) {
+        return <span>Browser does not support microphone</span>
     }
 
     const handleSaveJournal = () => {
