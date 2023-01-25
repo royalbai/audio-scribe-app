@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -293,6 +295,14 @@ a {
   color: inherit;
 }
 
+h1 {
+  font-family: "Arvo", serif;
+}
+
+h2, h3, h4, ul, p {
+  font-family: "Inter", sans-serif;
+}
+
 header {
   margin-bottom: 10px;
 }
@@ -565,7 +575,7 @@ footer {
     display: block;
     position: absolute;
     width: 20%;
-    height: 92.7vh;
+    height: 870px;
     z-index: 20;
     background-color: lightseagreen;
   }
@@ -611,7 +621,7 @@ footer {
     top: 68px;
     right: 0;
     width: 20%;
-    height: 92.7vh;
+    height: 870px;
     padding: 50px;
     background-color: lightgoldenrodyellow;
     z-index: 30;
