@@ -426,6 +426,7 @@ h1 {
 .navHeader p {
   margin-left: 5%;
   width: 50%;
+  font-size: 0.8rem;
 }
 .navHeader i {
   width: 10%;
@@ -594,14 +595,13 @@ h1 {
 }
 
 .journaling p {
-  text-align: center;
   margin: 20px 0;
 }
 .journaling input {
   width: 100%;
   border: none;
-  border-bottom: 2px solid black;
-  padding-top: 10px;
+  border-bottom: 2px solid #232323;
+  padding: 10px;
 }
 .journaling h3 {
   font-size: 3rem;
@@ -613,29 +613,18 @@ h1 {
   margin: 0 auto;
   border: none;
   border-radius: 50%;
-  box-shadow: -10px 10px 15px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: -10px 10px 15px 10px rgba(31, 31, 31, 0.5);
 }
-.journaling button {
-  display: block;
-  margin: 0 auto;
-  padding: 5px;
-  margin-top: 10px;
-  background-color: transparent;
-  border-radius: 15px;
-  border: 1px solid black;
-  margin-top: 40px;
+.journaling li {
+  padding: 10px 0;
 }
-.journaling ul li {
-  margin: 10px 0;
-}
-.journaling ul p {
-  margin: 10px 0;
+.journaling p {
+  padding: 5px 0;
   text-align: start;
 }
 
 .transcript {
   min-height: 50vh;
-  background-color: royalblue;
 }
 
 .fa-microphone-lines-slash {
@@ -643,7 +632,7 @@ h1 {
 }
 
 .fa-microphone-lines {
-  color: darkgreen;
+  color: #006151;
 }
 
 .settings {

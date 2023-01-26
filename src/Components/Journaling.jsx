@@ -17,16 +17,20 @@ function Journaling() {
         return <span>Browser does not support microphone</span>
     }
 
-    const handleSaveJournal = () => {
-        const journalTitle = title !== "" ? title : "Untitled";
-        setJournals([...journals, {title: journalTitle, text: transcript, date: new Date().toString()}]);
-        setSaved("Your entry was saved ✔")
-        resetTranscript();
-    }
+    // const handleSaveJournal = () => {
+    //     const journalTitle = title !== "" ? title : "Untitled";
+    //     setJournals([...journals, {title: journalTitle, text: transcript, date: new Date().toString()}]);
+    //     setSaved("Your entry was saved ✔")
+    //     resetTranscript();
+    // }
 
     const toggleMic = () => {
         if(isListening){
         SpeechRecognition.stopListening();
+        const journalTitle = title !== "" ? title : "Untitled";
+        setJournals([...journals, {title: journalTitle, text: transcript, date: new Date().toString()}]);
+        setSaved("Your entry was saved ✔")
+        resetTranscript();
         }else{
         SpeechRecognition.startListening({ continuous:true });
         }
@@ -36,9 +40,10 @@ function Journaling() {
     return (
         <div className="journaling wrapper">
             <input type="text" placeholder="Type in your title" onChange={(e) => setTitle(e.target.value)} value={title} />
+            <p>Transcribing...</p>
             <p className="transcript">{transcript}</p>
             <h3 onClick={toggleMic}>{listening ? <i className="fa-solid fa-microphone-lines"></i> : <i className="fa-solid fa-microphone-lines-slash"></i>}</h3>
-            <button onClick={handleSaveJournal}>Save Journal</button>
+            {/* <button onClick={handleSaveJournal}>Save Journal</button> */}
             <p>{saved}</p>
             <ul>
                 {journals.map((journal, index) => (

@@ -1,6 +1,7 @@
 import React, { useRef, useState }from "react";
-import { Link } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import CustomCalendar from "./Calendar";
+import Home from "./Home";
 
 function Nav() {
     const [currentPage, setCurrentPage] = useState("Home");
@@ -38,16 +39,19 @@ function Nav() {
             <nav className="mobileNav" ref={mobileMenuDropdownRef}>
                 <ul>
                     <li>
-                        <Link to="/" onClick={() => handleLinkClick("Home")}><i className="fa-solid fa-house-chimney"></i>Home</Link>
+                        <Link to="/home" onClick={() => handleLinkClick("Home")}><i className="fa-solid fa-house-chimney"></i>Home</Link>
                     </li>
                     <li>
-                        <Link to="/journaling" onClick={() => handleLinkClick("Create New Journal")}><i className="fa-regular fa-file-lines"></i>Journals</Link>
+                        <Link to="/savednotes" onClick={() => handleLinkClick("Journals")}><i className="fa-regular fa-file-lines"></i>Journals</Link>
                     </li>
                     <li>
                         <Link to="/settings" onClick={() => handleLinkClick("Settings")}><i className="fa-solid fa-user"></i>Profile</Link>
                     </li>
                 </ul>
             </nav>
+            <Routes>
+                <Route path="/home" element={<Home handleLinkClick={handleLinkClick} />} />
+            </Routes>
         </div>
     )
 }
