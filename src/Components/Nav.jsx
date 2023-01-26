@@ -49,9 +49,9 @@ function Nav() {
                     </li>
                 </ul>
             </nav>
-            <Routes>
+            {/* <Routes>
                 <Route path="/home" element={<Home handleLinkClick={handleLinkClick} />} />
-            </Routes>
+            </Routes> */}
         </div>
     )
 }

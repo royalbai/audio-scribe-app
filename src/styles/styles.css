@@ -287,6 +287,7 @@ input {
   max-width: 1920px;
   width: 90%;
   margin: 0 auto;
+  padding-top: 10px;
 }
 
 .App {
@@ -342,6 +343,7 @@ input {
 }
 .signUp p {
   margin: 40px 0;
+  text-align: center;
 }
 .signUp a {
   color: #006151;
@@ -401,15 +403,10 @@ h1 {
   font-family: "Arvo", serif;
 }
 
-header {
-  margin-bottom: 10px;
-}
-
 h1 {
-  text-align: center;
   border-bottom: 2px solid lightgray;
   margin: 0;
-  padding: 10px 0;
+  padding: 10px 5%;
   background-color: white;
 }
 
@@ -591,9 +588,6 @@ h1 {
   padding-bottom: 10px;
 }
 
-.journaling p {
-  margin: 20px 0;
-}
 .journaling input {
   width: 100%;
   border: none;
@@ -616,6 +610,7 @@ h1 {
   padding: 10px 0;
 }
 .journaling p {
+  margin: 20px 0;
   padding: 5px 0;
   text-align: start;
 }
@@ -695,14 +690,17 @@ h1 {
 footer {
   background-color: rgb(240, 240, 240);
   font-size: 0.6rem;
-  padding: 10px;
+  padding: 12px;
   text-align: center;
   width: 100%;
 }
 
 @media (min-width: 940px) {
   .wrapper {
-    width: 40%;
+    width: 70%;
+  }
+  h1 {
+    padding-left: 15%;
   }
   .navHeader {
     display: none;
@@ -710,46 +708,33 @@ footer {
   .mobileNav {
     display: block;
     position: absolute;
-    width: 20%;
-    height: 870px;
+    width: 15%;
+    height: 100vh;
     z-index: 20;
-    background-color: lightseagreen;
+    margin-left: 5%;
+    background-color: white;
+    border-left: 2px solid lightgray;
+    border-right: 2px solid lightgray;
   }
   .mobileNav ul {
-    flex-direction: column;
-    padding-top: 10px;
+    padding-top: 40px;
   }
   .mobileNav li {
     width: 100%;
+    margin: 30px 0;
+  }
+  .mobileNav i {
+    width: 50px;
+    display: inline-block;
     text-align: center;
-    display: flex;
-    align-items: center;
-    padding-left: 50px;
   }
-  .mobileNav li a {
-    padding: 20px;
-    border-radius: 25px;
-  }
-  .mobileNav li a:hover, .mobileNav li a:focus {
-    background-color: royalblue;
-  }
-  .mobileNav li i {
-    margin-right: 20px;
-  }
-  .mobileNav li div {
-    text-align: left;
-  }
-  .mobileNav ul li:nth-child(1) {
-    border: 1px solid black;
-    border-radius: 15px;
-    width: 70%;
-    margin: 0 auto;
-    margin-bottom: 100px;
+  .mobileNav a {
+    display: block;
     padding: 10px;
   }
-  .mobileNav p {
-    font-size: 1rem;
-    width: 100%;
+  .mobileNav a:hover, .mobileNav a:focus {
+    background-color: #006151;
+    color: white;
   }
   .calendar {
     display: block;
@@ -757,7 +742,7 @@ footer {
     top: 68px;
     right: 0;
     width: 20%;
-    height: 870px;
+    height: 100vh;
     padding: 50px;
     background-color: lightgoldenrodyellow;
     z-index: 30;
@@ -790,5 +775,36 @@ footer {
     margin: 0 auto;
     margin-top: 30px;
     border-radius: 25px;
+  }
+  .webPage {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .webPage img {
+    width: 50%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .webPage div {
+    width: 30%;
+  }
+  .journaling {
+    width: 40%;
+    background-color: white;
+    height: 100vh;
+    border-left: 2px solid lightgray;
+    border-right: 2px solid lightgray;
+  }
+  .journaling input {
+    padding: 10px 0;
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+  }
+  .journaling p {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    padding: 20px 0;
   }
 }/*# sourceMappingURL=styles.css.map */
