@@ -384,6 +384,7 @@ input {
 
 html {
   font-size: 125%;
+  font-family: "Inter", sans-serif;
   color: #232323;
 }
 
@@ -398,10 +399,6 @@ a {
 
 h1 {
   font-family: "Arvo", serif;
-}
-
-h2, h3, h4, ul, p {
-  font-family: "Inter", sans-serif;
 }
 
 header {
@@ -647,15 +644,52 @@ h1 {
 .settings label {
   display: block;
 }
+.settings input {
+  width: 85%;
+  padding: 10px;
+  border: 1px solid #232323;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
 .settings i {
   margin-left: 15px;
+  color: #006151;
+}
+
+.photoEdit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+.photoEdit i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 4rem;
+  border: 1px solid #232323;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  padding: 70px;
+}
+.photoEdit button {
+  padding: 10px;
 }
 
 .submit {
-  display: flex;
-  margin: 0 auto;
   margin-top: 20px;
-  padding: 5px 10px;
+}
+.submit input {
+  background-color: #006151;
+  color: white;
+  border: none;
+}
+.submit input:hover, .submit input:focus {
+  background-color: white;
+  color: #006151;
 }
 
 footer {

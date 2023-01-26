@@ -22,6 +22,11 @@ function Settings() {
     return (
         <div className="settings wrapper">
             <h2>Profile</h2>
+            <div className="photoEdit">
+                <h5>Display Photo</h5>
+                <i className="fa-solid fa-user"></i>
+                <button>Edit Photo</button>
+            </div>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="fullName">Full Name:</label>
                 <input type="text" name="fullName" value={formData.fullName} onChange={handleChange} /><i className="fa-solid fa-pen-to-square"></i>
@@ -32,8 +37,10 @@ function Settings() {
                 <label htmlFor="password">Password:</label>
                 <input type="password" name="password" value={formData.password} onChange={handleChange} /><i className="fa-solid fa-pen-to-square"></i>
                 <br />
-                <input type="submit" value="Submit" className="submit"/>
-        </form>
+                <div className="submit">
+                    <input type="submit" value="Submit" />
+                </div>
+            </form>
         </div>
     )
 }
