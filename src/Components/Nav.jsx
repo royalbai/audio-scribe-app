@@ -39,7 +39,7 @@ function Nav() {
             <nav className="mobileNav" ref={mobileMenuDropdownRef}>
                 <ul>
                     <li>
-                        <Link to="/home" onClick={() => handleLinkClick("Home")}><i className="fa-solid fa-house-chimney"></i>Home</Link>
+                        <Link to="/journaling" onClick={() => handleLinkClick("Home")}><i className="fa-solid fa-house-chimney"></i>Home</Link>
                     </li>
                     <li>
                         <Link to="/savednotes" onClick={() => handleLinkClick("Journals")}><i className="fa-regular fa-file-lines"></i>Journals</Link>
