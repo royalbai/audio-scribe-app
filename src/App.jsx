@@ -10,6 +10,7 @@ import SavedNotes from "./Components/SavedNotes";
 import Settings from "./Components/Settings";
 import Footer from './Components/Footer';
 import CustomCalendar from './Components/Calendar';
+import Logo from "./assets/Logo.png"
 
 
 function App() {
@@ -19,10 +20,12 @@ function App() {
     <div>
       <div className="App">
         <header>
-          <h1>Audio Scribe</h1>
+          <img src={Logo} alt="Audio Scribe logo" />
+        </header>
+        <div>
           {!['/','/signin','/signup'].includes(location.pathname) && <Nav />}
           {!['/','/signin','/signup'].includes(location.pathname) && <CustomCalendar />}
-        </header>
+        </div>
         <Routes>
           <Route path="/" element={<WebPage />} />
           <Route path="/signin" element={<SignIn />} />

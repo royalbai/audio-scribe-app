@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
+import OnImage from "../assets/Mic-Enabled.png";
+import OffImage from "../assets/Mic-Disabled.png";
 
 function Journaling() {
 
@@ -40,9 +42,11 @@ function Journaling() {
     return (
         <div className="journaling wrapper">
             <input type="text" placeholder="Type in your title" onChange={(e) => setTitle(e.target.value)} value={title} />
-            <p>Transcribing...</p>
+            <h4>Transcribing...</h4>
             <p className="transcript">{transcript}</p>
-            <h3 onClick={toggleMic}>{listening ? <i className="fa-solid fa-microphone-lines"></i> : <i className="fa-solid fa-microphone-lines-slash"></i>}</h3>
+            <div onClick={toggleMic}>
+                {listening ? <img src={OnImage} alt="" /> : <img src={OffImage} alt="" /> }
+            </div>
             {/* <button onClick={handleSaveJournal}>Save Journal</button> */}
             <p>{saved}</p>
             <ul>

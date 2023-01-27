@@ -23,7 +23,7 @@ function SignIn() {
 
     return (
         <div className="signIn wrapper">
-            <h2>Sign in to <span>Audio Scribe</span></h2>
+            <h3>Sign in to <span>Audio Scribe</span></h3>
             <form className="infoEntry" /* onSubmit={handleSubmit} */>
                 <div>
                     <input placeholder="Email" onChange={(e) => setEmail(e.target.value)} type="email" />

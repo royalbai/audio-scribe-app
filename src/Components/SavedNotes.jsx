@@ -4,7 +4,7 @@ function SavedNotes() {
 
     return (
         <div className="saved wrapper">
-            <p>My Saved Journals</p>
+            <h3>My Saved Journals</h3>
         </div>
     )
 }

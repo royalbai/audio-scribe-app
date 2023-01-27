@@ -6,17 +6,9 @@
         padding: 10px;
     }
 
-    h3 {
-        font-size: 3rem;
-        width: 120px;
-        height: 120px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    img {
+        width: 40%;
         margin: 0 auto;
-        border: none;
-        border-radius: 50%;
-        box-shadow: -10px 10px 15px 10px rgba(31, 31, 31, 0.5);
     }
 
     
@@ -24,7 +16,7 @@
         padding: 10px 0;
     }
 
-    p {
+    h4 {
         margin: 20px 0;
         padding: 5px 0;
         text-align: start;
@@ -34,12 +26,4 @@
 
 .transcript {
     min-height: 50vh;
-}
-
-.fa-microphone-lines-slash {
-    color: gray;
-}
-
-.fa-microphone-lines {
-    color: #006151;
 }

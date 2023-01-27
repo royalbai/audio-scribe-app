@@ -403,11 +403,14 @@ h1 {
   font-family: "Arvo", serif;
 }
 
-h1 {
+header {
   border-bottom: 2px solid lightgray;
-  margin: 0;
-  padding: 10px 5%;
   background-color: white;
+}
+header img {
+  padding: 10px 0;
+  margin-left: 5%;
+  width: 50%;
 }
 
 .navHeader {
@@ -623,22 +626,14 @@ h1 {
   border-bottom: 2px solid #232323;
   padding: 10px;
 }
-.journaling h3 {
-  font-size: 3rem;
-  width: 120px;
-  height: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.journaling img {
+  width: 40%;
   margin: 0 auto;
-  border: none;
-  border-radius: 50%;
-  box-shadow: -10px 10px 15px 10px rgba(31, 31, 31, 0.5);
 }
 .journaling li {
   padding: 10px 0;
 }
-.journaling p {
+.journaling h4 {
   margin: 20px 0;
   padding: 5px 0;
   text-align: start;
@@ -646,14 +641,6 @@ h1 {
 
 .transcript {
   min-height: 50vh;
-}
-
-.fa-microphone-lines-slash {
-  color: gray;
-}
-
-.fa-microphone-lines {
-  color: #006151;
 }
 
 .settings {
@@ -728,9 +715,6 @@ footer {
   .wrapper {
     width: 70%;
   }
-  h1 {
-    padding-left: 10%;
-  }
   .navHeader {
     display: none;
   }
@@ -738,7 +722,7 @@ footer {
     display: block;
     position: absolute;
     width: 20%;
-    height: 100vh;
+    min-height: 1000px;
     z-index: 20;
     margin-left: 5%;
     background-color: white;
@@ -772,7 +756,7 @@ footer {
     right: 0;
     width: 20%;
     margin-right: 5%;
-    height: 100vh;
+    min-height: 1000px;
     padding: 50px;
     background-color: white;
     border-left: 2px solid lightgray;
@@ -849,7 +833,7 @@ footer {
   .journaling {
     width: 40%;
     background-color: white;
-    height: 100vh;
+    min-height: 1000px;
     border-left: 2px solid lightgray;
     border-right: 2px solid lightgray;
   }
@@ -859,10 +843,33 @@ footer {
     display: block;
     margin: 0 auto;
   }
-  .journaling p {
+  .journaling h5, .journaling p {
     width: 90%;
     display: block;
     margin: 0 auto;
     padding: 20px 0;
+  }
+  .settings {
+    width: 40%;
+    background-color: white;
+    height: 100vh;
+    border-left: 2px solid lightgray;
+    border-right: 2px solid lightgray;
+  }
+  .settings h2 {
+    padding: 10px 0;
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+  }
+  .settings form {
+    margin-left: 80px;
+  }
+  .saved {
+    width: 40%;
+    background-color: white;
+    height: 100vh;
+    border-left: 2px solid lightgray;
+    border-right: 2px solid lightgray;
   }
 }/*# sourceMappingURL=styles.css.map */

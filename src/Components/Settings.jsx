@@ -21,7 +21,7 @@ function Settings() {
 
     return (
         <div className="settings wrapper">
-            <h2>Profile</h2>
+            <h3>Profile</h3>
             <div className="photoEdit">
                 <h5>Display Photo</h5>
                 <i className="fa-solid fa-user"></i>
