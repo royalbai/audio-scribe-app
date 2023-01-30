@@ -13,14 +13,57 @@
         display: block;
     }
 
+    input {
+        width: 85%;
+        padding: 10px;
+        border: 1px solid #232323;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+
     i {
         margin-left: 15px;
+        color: #006151;
+    }
+}
+
+.photoEdit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    
+    i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        font-size: 4rem;
+        border: 1px solid #232323;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        padding: 70px;
+    }
+
+    button {
+        padding: 10px;
     }
 }
 
 .submit {
-    display: flex;
-    margin: 0 auto;
     margin-top: 20px;
-    padding: 5px 10px;
+
+    input {
+        background-color: #006151;
+        color: white;
+        border: none;
+
+        &:hover,
+        &:focus {
+            background-color: white;
+            color: #006151;
+        }
+    }
 }

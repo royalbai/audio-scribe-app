@@ -1,4 +1,10 @@
 .homepage {
+    h2 {
+        margin: 20px 0;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
     a {
         display: flex;
         justify-content: center;
@@ -6,29 +12,49 @@
 
     button {
         background-color: white;
-        padding: 10px;
-        border-radius: 15px;
-        border: 1px solid black;
+        padding: 10px 30px;
+        border-radius: 5px;
+        border: 1px solid #006151;
+        color: #006151;
+
+        &:hover,
+        &:focus {
+            background-color: #006151;
+            color: white;
+        }
+    }
+
+    i {
+        margin-right: 10px;
     }
 
     div {
         margin: 10px 0;
         padding: 10px;
-        background-color: lightgray;
+        background-color: white;
+        text-align: center;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+    }
 
-        h4 {
-            text-align: center;
-            margin-bottom: 10px;
-        }
+    h4 {
+        text-align: center;
+        margin: 30px 0;
+        font-size: 0.8rem;
+        font-weight: 400;
+    }
 
-        ul {
-            list-style: "🚀";
-            list-style-position: inside;
-        }
+    p {
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+}
 
-        p,
-        li {
-            margin-bottom: 10px;
-        }
+.homeRecent {
+    h4 {
+        text-align: start;
+        font-size: 1.2rem;
+        border-bottom: 3px solid lightgray;
+        padding-bottom: 10px;
     }
 }

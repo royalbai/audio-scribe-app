@@ -22,22 +22,19 @@ function SignIn() {
     // };
 
     return (
-        <div>
-            <div className="instructions">
-                <h2>Sign in to your account</h2>
-                <p>Don't have an account yet? <Link to="/signup">Sign up</Link></p>
-            </div>
+        <div className="signIn wrapper">
+            <h2>Sign in to <span>Audio Scribe</span></h2>
             <form className="infoEntry" /* onSubmit={handleSubmit} */>
                 <div>
-                    <label htmlFor="">Email Address</label>
-                    <input onChange={(e) => setEmail(e.target.value)} type="email" />
+                    <input placeholder="Email" onChange={(e) => setEmail(e.target.value)} type="email" />
                 </div>
                 <div>
-                    <label htmlFor="">Enter Password</label>
-                    <input onChange={(e) => setPassword(e.target.value)} type="password" />
+                    <input placeholder="Password" onChange={(e) => setPassword(e.target.value)} type="password" />
+                    <p>Forgot your password?</p>
                 </div>
                 <button>Sign In</button>
             </form>
+            <p>Or <Link to="/signup">Create Account</Link></p>
         </div>
     );
 };

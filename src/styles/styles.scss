@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap'); 
+// font-family: 'Arvo', serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+// font-family: 'Inter',sans-serif;
 
 @import "./partials/setup";
 @import "./partials/baseStyles";
+@import "./partials/webPage";
+@import "./partials/signUp";
+@import "./partials/signIn";
 @import "./partials/typography";
 @import "./partials/header";
 @import "./partials/nav";
@@ -10,4 +17,5 @@
 @import "./partials/settings";
 @import "./partials/footer";
 @import "./partials/mediaQueries";
+
 

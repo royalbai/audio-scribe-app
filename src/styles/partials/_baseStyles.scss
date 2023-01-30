@@ -9,14 +9,30 @@ img {
 
 button {
     cursor: pointer;
+    background-color: #006151;
+    color: white;
+    border: none;
+    border-radius: 5px;
+
+    &:hover,
+    &:focus {
+        background-color: white;
+        color: #006151;
+    }
+}
+
+input {
+    background-color: transparent;
 }
 
 .wrapper {
     max-width: 1920px;
     width: 90%;
     margin: 0 auto;
+    padding-top: 10px;
 }
 
 .App {
-    min-height: 100vh;
+    min-height: 900px;
+    background-color: rgb(240, 240, 240) ;
 }

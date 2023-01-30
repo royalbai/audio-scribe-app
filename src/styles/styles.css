@@ -1,4 +1,5 @@
-@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -268,20 +269,112 @@ img {
 
 button {
   cursor: pointer;
+  background-color: #006151;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+button:hover, button:focus {
+  background-color: white;
+  color: #006151;
+}
+
+input {
+  background-color: transparent;
 }
 
 .wrapper {
   max-width: 1920px;
   width: 90%;
   margin: 0 auto;
+  padding-top: 10px;
 }
 
 .App {
-  min-height: 100vh;
+  min-height: 900px;
+  background-color: rgb(240, 240, 240);
+}
+
+.webPage img {
+  width: 100%;
+  margin: 0 auto;
+}
+.webPage button {
+  display: flex;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.signUp h2 {
+  text-align: center;
+  margin: 50px 0;
+}
+.signUp input {
+  width: 250px;
+  display: flex;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #232323;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.signUp button {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+}
+.signUp p {
+  margin: 40px 0;
+  text-align: center;
+}
+.signUp a {
+  color: #006151;
+}
+.signUp span {
+  text-decoration: underline;
+}
+
+.signIn h2 {
+  text-align: center;
+  margin: 50px 0;
+}
+.signIn input {
+  width: 250px;
+  display: flex;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #232323;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.signIn button {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+}
+.signIn p {
+  margin: 40px 0;
+  text-align: center;
+}
+.signIn a {
+  color: #006151;
+}
+.signIn span {
+  display: block;
 }
 
 html {
   font-size: 125%;
+  font-family: "Inter", sans-serif;
+  color: #232323;
 }
 
 ul {
@@ -293,16 +386,18 @@ a {
   color: inherit;
 }
 
-header {
-  margin-bottom: 10px;
+h1 {
+  font-family: "Arvo", serif;
 }
 
-h1 {
-  text-align: center;
-  border-bottom: 2px solid black;
-  margin: 0;
+header {
+  border-bottom: 2px solid lightgray;
+  background-color: white;
+}
+header img {
   padding: 10px 0;
-  background-color: lightblue;
+  margin-left: 5%;
+  width: 50%;
 }
 
 .navHeader {
@@ -310,11 +405,12 @@ h1 {
   justify-content: space-between;
   align-items: center;
   padding: 5px 0;
-  background-color: lightsalmon;
+  background-color: white;
 }
 .navHeader p {
   margin-left: 5%;
   width: 50%;
+  font-size: 0.8rem;
 }
 .navHeader i {
   width: 10%;
@@ -335,7 +431,7 @@ h1 {
   display: block;
   width: 100%;
   height: 5px;
-  background-color: black;
+  background-color: #232323;
   border-radius: 100px;
   margin: 5px 0;
   transition: 0.5s;
@@ -358,46 +454,73 @@ h1 {
 .mobileNav.active {
   display: block;
   position: absolute;
-  top: 67px;
-  width: 90%;
-  height: 300px;
+  top: 69px;
+  width: 250px;
+  height: 400px;
   z-index: 20;
-  background-color: lightseagreen;
-  border: 1px solid black;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
 }
 .mobileNav.active ul {
-  flex-direction: column;
-  padding-top: 10px;
+  padding-top: 60px;
 }
 .mobileNav.active li {
-  width: 100%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  padding: 20px 50px;
-}
-.mobileNav.active li:hover, .mobileNav.active li:focus {
-  background-color: royalblue;
-}
-.mobileNav.active li i {
-  margin-right: 20px;
-}
-.mobileNav.active li div {
-  text-align: left;
-}
-.mobileNav.active ul li:nth-child(1) {
-  border: 1px solid black;
-  border-radius: 15px;
-  width: 70%;
-  margin: 0 auto;
-  padding: 10px;
-}
-.mobileNav.active ul li:nth-child(1):hover, .mobileNav.active ul li:nth-child(1):focus {
-  background-color: transparent;
+  margin: 20px 10px;
 }
 .mobileNav.active p {
   font-size: 1rem;
   width: 100%;
+}
+.mobileNav.active i {
+  width: 50px;
+  display: inline-block;
+  text-align: center;
+}
+.mobileNav.active a {
+  display: block;
+  padding: 10px;
+}
+.mobileNav.active a:hover, .mobileNav.active a:focus {
+  background-color: #006151;
+  color: white;
+}
+
+.landingNav .burgerIcon {
+  display: block;
+  position: absolute;
+  padding: 0;
+  top: 10px;
+  right: 20px;
+  margin: 0;
+}
+.landingNav .mobileNav.active {
+  top: 0;
+  right: 0;
+}
+.landingNav .mobileNav.active ul {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+.landingNav .mobileNav.active li {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #232323;
+  padding: 10px 0;
+}
+.landingNav .mobileNav.active a {
+  padding: 0;
+}
+.landingNav .mobileNav.active .available {
+  text-align: center;
+  border-bottom: none;
+}
+.landingNav .mobileNav.active .available li {
+  font-size: 0.8rem;
+  border-bottom: none;
+  text-align: center;
 }
 
 .calendar {
@@ -409,12 +532,15 @@ h1 {
   position: absolute;
   top: 113px;
   right: 0;
-  background-color: lightgoldenrodyellow;
-  z-index: 30;
+  background-color: white;
+  z-index: 20;
+  width: 320px;
+  height: 500px;
+  border-radius: 5px;
 }
 .calendar.active .customCalendar {
-  width: 200px;
-  height: 200px;
+  width: 290px;
+  height: 290px;
   border: 2px solid #333;
   border-radius: 10px;
   margin: 0 auto;
@@ -423,105 +549,122 @@ h1 {
   background-color: #ddd;
 }
 .calendar.active .customCalendar .react-calendar__tile {
-  font-size: 0.85rem;
-  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 6px;
+  background-color: transparent;
+  color: #232323;
 }
 .calendar.active .customCalendar .react-calendar__tile:hover {
   background-color: #eee;
   cursor: pointer;
 }
 .calendar.active .customCalendar .react-calendar__tile--active {
-  background-color: #333;
+  background-color: #006151;
   color: #fff;
 }
-.calendar.active .calButton {
+.calendar.active .customCalendar .react-calendar__month-view__weekdays__weekday {
+  font-size: 18px;
+  color: #232323;
+  background-color: white;
+}
+.calendar.active .customCalendar .react-calendar__month-view__weekdays__weekday abbr {
+  text-decoration: none;
+}
+.calendar.active .customCalendar .react-calendar__navigation {
+  text-align: center;
+}
+.calendar.active .customCalendar .react-calendar__navigation button {
   background-color: transparent;
+  color: #232323;
+  margin-bottom: 5px;
+}
+.calendar.active .calButton {
   padding: 10px;
   display: block;
   margin: 0 auto;
   margin-top: 30px;
-  border-radius: 25px;
+  border-radius: 5px;
+  width: 90%;
+  color: #232323;
+  background-color: transparent;
+  border: 1px solid #232323;
+}
+.calendar.active .calButton:hover, .calendar.active .calButton:focus {
+  background-color: #006151;
+  color: white;
+  border: none;
 }
 
+.homepage h2 {
+  margin: 20px 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
 .homepage a {
   display: flex;
   justify-content: center;
 }
 .homepage button {
   background-color: white;
-  padding: 10px;
-  border-radius: 15px;
-  border: 1px solid black;
+  padding: 10px 30px;
+  border-radius: 5px;
+  border: 1px solid #006151;
+  color: #006151;
+}
+.homepage button:hover, .homepage button:focus {
+  background-color: #006151;
+  color: white;
+}
+.homepage i {
+  margin-right: 10px;
 }
 .homepage div {
   margin: 10px 0;
   padding: 10px;
-  background-color: lightgray;
-}
-.homepage div h4 {
+  background-color: white;
   text-align: center;
-  margin-bottom: 10px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
 }
-.homepage div ul {
-  list-style: "🚀";
-  list-style-position: inside;
+.homepage h4 {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 0.8rem;
+  font-weight: 400;
 }
-.homepage div p,
-.homepage div li {
+.homepage p {
   margin-bottom: 10px;
+  font-weight: 600;
 }
 
-.journaling p {
-  text-align: center;
-  margin: 20px 0;
+.homeRecent h4 {
+  text-align: start;
+  font-size: 1.2rem;
+  border-bottom: 3px solid lightgray;
+  padding-bottom: 10px;
 }
+
 .journaling input {
   width: 100%;
   border: none;
-  border-bottom: 2px solid black;
-  padding-top: 10px;
+  border-bottom: 2px solid #232323;
+  padding: 10px;
 }
-.journaling h3 {
-  font-size: 3rem;
-  width: 120px;
-  height: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.journaling img {
+  width: 40%;
   margin: 0 auto;
-  border: none;
-  border-radius: 50%;
-  box-shadow: -10px 10px 15px 10px rgba(0, 0, 0, 0.5);
 }
-.journaling button {
-  display: block;
-  margin: 0 auto;
-  padding: 5px;
-  margin-top: 10px;
-  background-color: transparent;
-  border-radius: 15px;
-  border: 1px solid black;
-  margin-top: 40px;
+.journaling li {
+  padding: 10px 0;
 }
-.journaling ul li {
-  margin: 10px 0;
-}
-.journaling ul p {
-  margin: 10px 0;
+.journaling h4 {
+  margin: 20px 0;
+  padding: 5px 0;
   text-align: start;
 }
 
 .transcript {
   min-height: 50vh;
-  background-color: royalblue;
-}
-
-.fa-microphone-lines-slash {
-  color: gray;
-}
-
-.fa-microphone-lines {
-  color: darkgreen;
 }
 
 .settings {
@@ -536,27 +679,68 @@ h1 {
 .settings label {
   display: block;
 }
+.settings input {
+  width: 85%;
+  padding: 10px;
+  border: 1px solid #232323;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
 .settings i {
   margin-left: 15px;
+  color: #006151;
+}
+
+.photoEdit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+.photoEdit i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 4rem;
+  border: 1px solid #232323;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  padding: 70px;
+}
+.photoEdit button {
+  padding: 10px;
 }
 
 .submit {
-  display: flex;
-  margin: 0 auto;
   margin-top: 20px;
-  padding: 5px 10px;
+}
+.submit input {
+  background-color: #006151;
+  color: white;
+  border: none;
+}
+.submit input:hover, .submit input:focus {
+  background-color: white;
+  color: #006151;
 }
 
 footer {
-  background-color: lightgreen;
-  padding: 10px;
+  background-color: rgb(240, 240, 240);
+  font-size: 0.6rem;
+  padding: 12px;
   text-align: center;
   width: 100%;
 }
 
 @media (min-width: 940px) {
+  header img {
+    width: 10%;
+  }
   .wrapper {
-    width: 40%;
+    width: 70%;
   }
   .navHeader {
     display: none;
@@ -565,45 +749,65 @@ footer {
     display: block;
     position: absolute;
     width: 20%;
-    height: 92.7vh;
+    min-height: 1000px;
     z-index: 20;
-    background-color: lightseagreen;
+    margin-left: 5%;
+    background-color: white;
+    border-left: 2px solid lightgray;
+    border-right: 2px solid lightgray;
   }
   .mobileNav ul {
-    flex-direction: column;
-    padding-top: 10px;
+    padding-top: 40px;
   }
   .mobileNav li {
     width: 100%;
+    margin: 30px 0;
+  }
+  .mobileNav i {
+    width: 100px;
+    display: inline-block;
     text-align: center;
-    display: flex;
-    align-items: center;
-    padding-left: 50px;
   }
-  .mobileNav li a {
-    padding: 20px;
-    border-radius: 25px;
-  }
-  .mobileNav li a:hover, .mobileNav li a:focus {
-    background-color: royalblue;
-  }
-  .mobileNav li i {
-    margin-right: 20px;
-  }
-  .mobileNav li div {
-    text-align: left;
-  }
-  .mobileNav ul li:nth-child(1) {
-    border: 1px solid black;
-    border-radius: 15px;
-    width: 70%;
-    margin: 0 auto;
-    margin-bottom: 100px;
+  .mobileNav a {
+    display: block;
     padding: 10px;
   }
-  .mobileNav p {
-    font-size: 1rem;
-    width: 100%;
+  .mobileNav a:hover, .mobileNav a:focus {
+    background-color: #006151;
+    color: white;
+  }
+  .landingNav .mobileNav {
+    display: none;
+  }
+  .landingNav .mobileNav.active {
+    display: block;
+    top: 20px;
+    right: 0;
+    min-height: 450px;
+  }
+  .landingNav .mobileNav.active ul {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+  .landingNav .mobileNav.active li {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #232323;
+    padding: 10px 0;
+  }
+  .landingNav .mobileNav.active a {
+    padding: 0;
+  }
+  .landingNav .mobileNav.active .available {
+    text-align: center;
+    border-bottom: none;
+  }
+  .landingNav .mobileNav.active .available li {
+    font-size: 0.8rem;
+    border-bottom: none;
+    text-align: center;
   }
   .calendar {
     display: block;
@@ -611,38 +815,121 @@ footer {
     top: 68px;
     right: 0;
     width: 20%;
-    height: 92.7vh;
+    margin-right: 5%;
+    min-height: 1000px;
     padding: 50px;
-    background-color: lightgoldenrodyellow;
+    background-color: white;
+    border-left: 2px solid lightgray;
+    border-right: 2px solid lightgray;
     z-index: 30;
   }
-  .customCalendar {
+  .calendar .customCalendar {
     width: 300px;
     height: 300px;
     border: 2px solid #333;
     border-radius: 10px;
   }
-  .customCalendar .react-calendar__month-view__weekdays {
+  .calendar .customCalendar .react-calendar__month-view__weekdays {
     background-color: #ddd;
   }
-  .customCalendar .react-calendar__tile {
-    font-size: 1.2rem;
-    font-weight: bold;
+  .calendar .customCalendar .react-calendar__tile {
+    font-size: 1.5rem;
+    padding: 3px;
+    background-color: transparent;
+    color: #232323;
   }
-  .customCalendar .react-calendar__tile:hover {
+  .calendar .customCalendar .react-calendar__tile:hover {
     background-color: #eee;
     cursor: pointer;
   }
-  .customCalendar .react-calendar__tile--active {
+  .calendar .customCalendar .react-calendar__tile--active {
     background-color: #333;
     color: #fff;
   }
-  .calButton {
+  .calendar .customCalendar .react-calendar__month-view__weekdays__weekday {
+    font-size: 18px;
+    color: #232323;
+    background-color: white;
+  }
+  .calendar .customCalendar .react-calendar__month-view__weekdays__weekday abbr {
+    text-decoration: none;
+  }
+  .calendar .customCalendar .react-calendar__navigation {
+    text-align: center;
+  }
+  .calendar .customCalendar .react-calendar__navigation button {
     background-color: transparent;
+    color: #232323;
+    margin-bottom: 5px;
+  }
+  .calendar .calButton {
     padding: 10px;
     display: block;
     margin: 0 auto;
     margin-top: 30px;
-    border-radius: 25px;
+    border-radius: 5px;
+    width: 90%;
+    color: #232323;
+    background-color: transparent;
+    border: 1px solid #232323;
+  }
+  .calendar .calButton:hover, .calendar .calButton:focus {
+    background-color: #006151;
+    color: white;
+    border: none;
+  }
+  .webPage {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .webPage img {
+    width: 50%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .webPage div {
+    width: 30%;
+  }
+  .journaling {
+    width: 40%;
+    background-color: white;
+    min-height: 1000px;
+    border-left: 2px solid lightgray;
+    border-right: 2px solid lightgray;
+  }
+  .journaling input {
+    padding: 10px 0;
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+  }
+  .journaling h4, .journaling h5, .journaling p {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  .settings {
+    width: 40%;
+    background-color: white;
+    height: 100vh;
+    border-left: 2px solid lightgray;
+    border-right: 2px solid lightgray;
+  }
+  .settings h2 {
+    padding: 10px 0;
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+  }
+  .settings form {
+    margin-left: 80px;
+  }
+  .saved {
+    width: 40%;
+    background-color: white;
+    height: 100vh;
+    border-left: 2px solid lightgray;
+    border-right: 2px solid lightgray;
   }
 }/*# sourceMappingURL=styles.css.map */

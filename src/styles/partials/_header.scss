@@ -1,11 +1,9 @@
 header {
-    margin-bottom: 10px;
-}
-
-h1 {
-    text-align: center;
-    border-bottom: 2px solid black;
-    margin: 0;
-    padding: 10px 0;
-    background-color: lightblue;
+    border-bottom: 2px solid lightgray;
+    background-color: white;
+    img {
+        padding: 10px 0;
+        margin-left: 5%;
+        width: 50%;
+    }
 }

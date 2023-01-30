@@ -3,8 +3,8 @@ import React from "react";
 function SavedNotes() {
 
     return (
-        <div>
-            <p>Hello world</p>
+        <div className="saved wrapper">
+            <h3>My Saved Journals</h3>
         </div>
     )
 }

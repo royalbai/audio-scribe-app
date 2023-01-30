@@ -38,26 +38,19 @@ function Nav() {
             <nav className="mobileNav" ref={mobileMenuDropdownRef}>
                 <ul>
                     <li>
-                        <i className="fa-solid fa-user"></i>
-                        <div>
-                        <p>Name</p>
-                        <p>Email@joice.ca</p>
-                        </div>
+                        <Link to="/journaling" onClick={() => handleLinkClick("Home")}><i className="fa-solid fa-house-chimney"></i>Home</Link>
                     </li>
                     <li>
-                        <i className="fa-solid fa-house-chimney"></i>
-                        <Link to="/" onClick={() => handleLinkClick("Home")}>Home</Link>
+                        <Link to="/savednotes" onClick={() => handleLinkClick("Journals")}><i className="fa-regular fa-file-lines"></i>Journals</Link>
                     </li>
                     <li>
-                        <i className="fa-solid fa-feather"></i>
-                        <Link to="/journaling" onClick={() => handleLinkClick("Create New Journal")}>Journals</Link>
-                    </li>
-                    <li>
-                        <i className="fa-solid fa-gear"></i>
-                        <Link to="/settings" onClick={() => handleLinkClick("Settings")}>Settings</Link>
+                        <Link to="/settings" onClick={() => handleLinkClick("Settings")}><i className="fa-solid fa-user"></i>Profile</Link>
                     </li>
                 </ul>
             </nav>
+            {/* <Routes>
+                <Route path="/home" element={<Home handleLinkClick={handleLinkClick} />} />
+            </Routes> */}
         </div>
     )
 }

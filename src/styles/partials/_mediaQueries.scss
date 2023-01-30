@@ -1,6 +1,11 @@
 @media (min-width: 940px) {
+    header {
+        img {
+            width: 10%;
+        }
+    }
     .wrapper {
-        width: 40%;
+        width: 70%;
     }
 
     .navHeader {
@@ -11,53 +16,80 @@
         display: block;
         position: absolute;
         width: 20%;
-        height: 92.7vh;
+        min-height: 1000px;
         z-index: 20;
-        background-color: lightseagreen;
+        margin-left: 5%;
+        background-color: white;
+        border-left: 2px solid lightgray;
+        border-right: 2px solid lightgray;
+        
 
         ul {
-            flex-direction: column;
-            padding-top: 10px;
+            padding-top: 40px;
         }
 
         li {
             width: 100%;
+            margin: 30px 0;
+        }
+
+        i {
+            width: 100px;
+            display: inline-block;
             text-align: center;
-            display: flex;
-            align-items: center;
-            padding-left: 50px;
+        }
+
+        a {
+            display: block;
+            padding: 10px;
+
+            &:hover,
+            &:focus {
+                background-color: #006151;
+                color: white;
+            }
+        }
+    }
+
+    .landingNav {
+        .mobileNav {
+            display: none;
+        }
+
+        .mobileNav.active {
+            display: block;
+            top: 20px;
+            right: 0;
+            min-height: 450px;
+
+            ul {
+                width: 90%;
+                margin: 0 auto;
+                padding-top: 30px;
+            }
+
+            li {
+                text-align: left;
+                margin: 0;
+                padding: 0;
+                border-bottom: 1px solid #232323;
+                padding: 10px 0;
+            }
 
             a {
-                padding: 20px;
-                border-radius: 25px;
+                padding: 0;
+            }
 
-                &:hover,
-                &:focus {
-                    background-color: royalblue;
+            .available {
+                text-align: center;
+                border-bottom: none;
+
+                li {
+                    font-size: 0.8rem;
+                    border-bottom: none;
+                    text-align: center;
                 }
             }
-
-            i {
-                margin-right: 20px;
-            }
-
-            div {
-                text-align: left;
-            }
-        }
-
-        ul li:nth-child(1) {
-            border: 1px solid black;
-            border-radius: 15px;
-            width: 70%;
-            margin: 0 auto;
-            margin-bottom: 100px;
-            padding: 10px;
-        }
-
-        p {
-            font-size: 1rem;
-            width: 100%;
         }
     }
 
@@ -67,44 +99,143 @@
         top: 68px;
         right: 0;
         width: 20%;
-        height: 92.7vh;
+        margin-right: 5%;
+        min-height: 1000px;
         padding: 50px;
-        background-color: lightgoldenrodyellow;
+        background-color: white;
+        border-left: 2px solid lightgray;
+        border-right: 2px solid lightgray;
         z-index: 30;
+    
+        .customCalendar {
+            width: 300px;
+            height: 300px;
+            border: 2px solid #333;
+            border-radius: 10px;
+
+            .react-calendar__month-view__weekdays {
+                background-color: #ddd;
+            }
+        
+            .react-calendar__tile {
+                font-size: 1.5rem;
+                padding: 3px;
+                background-color: transparent;
+                color: #232323;
+            }
+        
+            .react-calendar__tile:hover {
+                background-color: #eee;
+                cursor: pointer;
+            }
+        
+            .react-calendar__tile--active {
+                background-color: #333;
+                color: #fff;
+            }
+
+            .react-calendar__month-view__weekdays__weekday {
+                font-size: 18px;
+                color: #232323;
+                background-color: white;
+
+                abbr {
+                    text-decoration: none;
+                }
+            }
+
+            .react-calendar__navigation {
+                text-align: center;
+
+                button {
+                    background-color: transparent;
+                    color: #232323;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+
+        .calButton {
+            padding: 10px;
+            display: block;
+            margin: 0 auto;
+            margin-top: 30px;
+            border-radius: 5px;
+            width: 90%;
+            color: #232323;
+            background-color: transparent;
+            border: 1px solid #232323;
+
+            &:hover,
+            &:focus {
+                background-color: #006151;
+                color: white;
+                border: none;
+            }
+        }
     }
 
-    .customCalendar {
-        width: 300px;
-        height: 300px;
-        border: 2px solid #333;
-        border-radius: 10px;
+    .webPage {
+        display: flex;
+        flex-direction: row-reverse;
+
+        img {
+            width: 50%;
+            object-fit: contain;
+        }
+
+        div {
+            width: 30%;
+        }
     }
 
-    .customCalendar .react-calendar__month-view__weekdays {
-        background-color: #ddd;
+    .journaling {
+        width: 40%;
+        background-color: white;
+        min-height: 1000px;
+        border-left: 2px solid lightgray;
+        border-right: 2px solid lightgray;
+
+        input {
+            padding: 10px 0;
+            width: 90%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        h4, h5, p {
+            width: 90%;
+            display: block;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
     }
 
-    .customCalendar .react-calendar__tile {
-        font-size: 1.2rem;
-        font-weight: bold;
+    .settings {
+        width: 40%;
+        background-color: white;
+        height: 100vh;
+        border-left: 2px solid lightgray;
+        border-right: 2px solid lightgray;
+        
+        h2 {
+                padding: 10px 0;
+                width: 90%;
+                display: block;
+                margin: 0 auto;
+        }
+
+        form {
+            margin-left: 80px;
+        }
     }
 
-    .customCalendar .react-calendar__tile:hover {
-        background-color: #eee;
-        cursor: pointer;
-    }
-
-    .customCalendar .react-calendar__tile--active {
-        background-color: #333;
-        color: #fff;
-    }
-
-    .calButton {
-        background-color: transparent;
-        padding: 10px;
-        display: block;
-        margin: 0 auto;
-        margin-top: 30px;
-        border-radius: 25px;
+    .saved {
+        width: 40%;
+        background-color: white;
+        height: 100vh;
+        border-left: 2px solid lightgray;
+        border-right: 2px solid lightgray;
     }
 }
+
