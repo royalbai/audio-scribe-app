@@ -26,7 +26,7 @@ function SignUp() {
 
     return (
         <div className="signUp wrapper">
-            <h3>Join Audio Scribe</h3>
+            <h2>Join Audio Scribe</h2>
             <form className="infoEntry" /* onSubmit={handleSubmit} */>
                 <div>
                     <input placeholder="Name" onChange={(e) => setEmail(e.target.value)} type="text" />

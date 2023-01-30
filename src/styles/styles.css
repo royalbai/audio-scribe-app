@@ -299,25 +299,12 @@ input {
   width: 100%;
   margin: 0 auto;
 }
-.webPage h2 {
-  margin: 50px 0;
-}
 .webPage button {
   display: flex;
   margin: 0 auto;
   padding: 20px;
   margin-top: 50px;
   margin-bottom: 100px;
-}
-.webPage ul {
-  text-align: center;
-  padding-bottom: 100px;
-}
-.webPage li {
-  font-size: 0.9rem;
-}
-.webPage h3 {
-  margin-bottom: 10px;
 }
 
 .signUp h2 {
@@ -497,6 +484,43 @@ header img {
 .mobileNav.active a:hover, .mobileNav.active a:focus {
   background-color: #006151;
   color: white;
+}
+
+.landingNav .burgerIcon {
+  display: block;
+  position: absolute;
+  padding: 0;
+  top: 10px;
+  right: 20px;
+  margin: 0;
+}
+.landingNav .mobileNav.active {
+  top: 0;
+  right: 0;
+}
+.landingNav .mobileNav.active ul {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+.landingNav .mobileNav.active li {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #232323;
+  padding: 10px 0;
+}
+.landingNav .mobileNav.active a {
+  padding: 0;
+}
+.landingNav .mobileNav.active .available {
+  text-align: center;
+  border-bottom: none;
+}
+.landingNav .mobileNav.active .available li {
+  font-size: 0.8rem;
+  border-bottom: none;
+  text-align: center;
 }
 
 .calendar {
@@ -712,6 +736,9 @@ footer {
 }
 
 @media (min-width: 940px) {
+  header img {
+    width: 10%;
+  }
   .wrapper {
     width: 70%;
   }
@@ -748,6 +775,39 @@ footer {
   .mobileNav a:hover, .mobileNav a:focus {
     background-color: #006151;
     color: white;
+  }
+  .landingNav .mobileNav {
+    display: none;
+  }
+  .landingNav .mobileNav.active {
+    display: block;
+    top: 20px;
+    right: 0;
+    min-height: 450px;
+  }
+  .landingNav .mobileNav.active ul {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+  .landingNav .mobileNav.active li {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #232323;
+    padding: 10px 0;
+  }
+  .landingNav .mobileNav.active a {
+    padding: 0;
+  }
+  .landingNav .mobileNav.active .available {
+    text-align: center;
+    border-bottom: none;
+  }
+  .landingNav .mobileNav.active .available li {
+    font-size: 0.8rem;
+    border-bottom: none;
+    text-align: center;
   }
   .calendar {
     display: block;
@@ -843,7 +903,7 @@ footer {
     display: block;
     margin: 0 auto;
   }
-  .journaling h5, .journaling p {
+  .journaling h4, .journaling h5, .journaling p {
     width: 90%;
     display: block;
     margin: 0 auto;

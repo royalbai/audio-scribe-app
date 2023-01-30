@@ -1,7 +1,6 @@
 import React, { useRef, useState }from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
 import CustomCalendar from "./Calendar";
-import Home from "./Home";
 
 function Nav() {
     const [currentPage, setCurrentPage] = useState("Home");

@@ -10,6 +10,7 @@ import SavedNotes from "./Components/SavedNotes";
 import Settings from "./Components/Settings";
 import Footer from './Components/Footer';
 import CustomCalendar from './Components/Calendar';
+import LandingNav from './Components/LandingNav';
 import Logo from "./assets/Logo.png"
 
 
@@ -21,6 +22,7 @@ function App() {
       <div className="App">
         <header>
           <img src={Logo} alt="Audio Scribe logo" />
+          {!['/journaling','/savednotes','/settings'].includes(location.pathname) && <LandingNav />}
         </header>
         <div>
           {!['/','/signin','/signup'].includes(location.pathname) && <Nav />}

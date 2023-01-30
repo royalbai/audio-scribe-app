@@ -1,5 +1,9 @@
 @media (min-width: 940px) {
-
+    header {
+        img {
+            width: 10%;
+        }
+    }
     .wrapper {
         width: 70%;
     }
@@ -43,6 +47,48 @@
             &:focus {
                 background-color: #006151;
                 color: white;
+            }
+        }
+    }
+
+    .landingNav {
+        .mobileNav {
+            display: none;
+        }
+
+        .mobileNav.active {
+            display: block;
+            top: 20px;
+            right: 0;
+            min-height: 450px;
+
+            ul {
+                width: 90%;
+                margin: 0 auto;
+                padding-top: 30px;
+            }
+
+            li {
+                text-align: left;
+                margin: 0;
+                padding: 0;
+                border-bottom: 1px solid #232323;
+                padding: 10px 0;
+            }
+
+            a {
+                padding: 0;
+            }
+
+            .available {
+                text-align: center;
+                border-bottom: none;
+
+                li {
+                    font-size: 0.8rem;
+                    border-bottom: none;
+                    text-align: center;
+                }
             }
         }
     }
@@ -157,7 +203,7 @@
             margin: 0 auto;
         }
 
-        h5, p {
+        h4, h5, p {
             width: 90%;
             display: block;
             margin: 0 auto;
