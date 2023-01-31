@@ -5,7 +5,7 @@
 .calendar.active {
     display: block;
     position: absolute;
-    top: 113px;
+    top: 98px;
     right: 0;
     background-color: white;
     z-index: 20;
@@ -16,13 +16,7 @@
     .customCalendar {
         width: 290px;
         height: 290px;
-        border: 2px solid #333;
-        border-radius: 10px;
         margin: 0 auto;
-
-        .react-calendar__month-view__weekdays {
-        background-color: #ddd;
-        }
 
         .react-calendar__tile {
             font-size: 1.2rem;
@@ -45,6 +39,8 @@
             font-size: 18px;
             color: #232323;
             background-color: white;
+            text-align: center;
+            margin: 10px 0;
 
             abbr {
                 text-decoration: none;
@@ -53,11 +49,22 @@
 
         .react-calendar__navigation {
             text-align: center;
+
             button {
                 background-color: transparent;
                 color: #232323;
                 margin-bottom: 5px;
             }
+        }
+
+        .react-calendar__navigation__next-button,
+        .react-calendar__navigation__prev-button {
+            padding: 0 30px;
+        }
+
+        .react-calendar__navigation__next2-button,
+        .react-calendar__navigation__prev2-button {
+            display: none;
         }
     }
     
