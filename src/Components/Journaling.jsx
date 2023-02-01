@@ -19,18 +19,15 @@ function Journaling() {
         return <span>Browser does not support microphone</span>
     }
 
-    // const handleSaveJournal = () => {
-    //     const journalTitle = title !== "" ? title : "Untitled";
-    //     setJournals([...journals, {title: journalTitle, text: transcript, date: new Date().toString()}]);
-    //     setSaved("Your entry was saved ✔")
-    //     resetTranscript();
-    // }
-
     const toggleMic = () => {
+        if (!title) {
+            setSaved("*Please input a title!*");
+            return;
+        }
+
         if(isListening){
         SpeechRecognition.stopListening();
-        const journalTitle = title !== "" ? title : "Untitled";
-        setJournals([...journals, {title: journalTitle, text: transcript, date: new Date().toString()}]);
+        setJournals([...journals, {title: title, text: transcript, date: new Date().toString()}]);
         setSaved("Your entry was saved ✔")
         resetTranscript();
         }else{
@@ -44,11 +41,10 @@ function Journaling() {
             <input type="text" placeholder="Type in your title" onChange={(e) => setTitle(e.target.value)} value={title} />
             <h4>Transcribing...</h4>
             <p className="transcript">{transcript}</p>
+            <h5>{saved}</h5>
             <div onClick={toggleMic}>
                 {listening ? <img src={OnImage} alt="" /> : <img src={OffImage} alt="" /> }
             </div>
-            {/* <button onClick={handleSaveJournal}>Save Journal</button> */}
-            <p>{saved}</p>
             <ul>
                 {journals.map((journal, index) => (
                 <li key={index}>

@@ -7,8 +7,9 @@
     }
 
     img {
-        width: 40%;
+        width: 150px;
         margin: 0 auto;
+        cursor: pointer;
     }
 
     
@@ -22,6 +23,9 @@
         text-align: start;
     }
     
+    h5 {
+        text-align: center;
+    }
 }
 
 .transcript {
