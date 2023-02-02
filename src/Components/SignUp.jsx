@@ -1,43 +1,32 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 
 function SignUp() {
-
+    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [error, setError] = useState("");
+    const navigate = useNavigate();
 
-    // const { createUser } = UserAuth();
-    const navigate = useNavigate()
-
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-    //     setError("");
-    //     try{
-    //         await createUser(email, password);
-    //         navigate("/account")
-    //     } catch (e) {
-    //         setError(e.message);
-    //         // console.log(e.message);
-    //     }
-    // };
+    const handleSignUp = async () => {
+        navigate("/journaling");
+    };
 
     return (
         <div className="signUp wrapper">
             <h2>Join Audio Scribe</h2>
-            <form className="infoEntry" /* onSubmit={handleSubmit} */>
+            <form className="infoEntry" onSubmit={handleSignUp}>
                 <div>
-                    <input placeholder="Name" onChange={(e) => setEmail(e.target.value)} type="text" />
+                    <input placeholder="Name" onChange={(e) => setName(e.target.value)} value={name} type="text" />
                 </div>
                 <div>
-                    <input placeholder="Email" onChange={(e) => setEmail(e.target.value)} type="email" />
+                    <input placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} type="email" />
                 </div>
                 <div>
-                    <input placeholder="Password" onChange={(e) => setPassword(e.target.value)} type="password" />
+                    <input placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password} type="password" />
                 </div>
-                <button>Create account</button>
+                <button type="submit">Create account</button>
             </form>
             <p>Already have an account? <Link to="/signin">Sign in</Link></p>
             <p>By signing-up with Joice you agree to the <span>Terms of Service and Privacy Policy.</span></p>
