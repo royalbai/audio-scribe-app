@@ -13,11 +13,11 @@ function Journaling() {
     const [showPopup, setShowPopup] = useState(false);
 
     if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
-        return <span>Browser does not support speech recognition</span>;
+        return <span className="notSupported">Browser does not support speech recognition</span>;
     }
 
     if (!isMicrophoneAvailable) {
-        return <span>Browser does not support microphone</span>
+        return <span className="notSupported">Browser does not support microphone</span>
     }
 
     const toggleMic = () => {

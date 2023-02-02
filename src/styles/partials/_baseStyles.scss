@@ -36,3 +36,11 @@ input {
     min-height: 900px;
     background-color: rgb(240, 240, 240) ;
 }
+
+.notSupported {
+    display: block;
+    text-align: center;
+    padding-top: 100px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
