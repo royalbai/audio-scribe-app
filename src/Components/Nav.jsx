@@ -1,5 +1,5 @@
 import React, { useRef, useState }from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CustomCalendar from "./Calendar";
 
 function Nav() {
@@ -7,6 +7,7 @@ function Nav() {
     const mobileMenuIconRef = useRef(null);
     const mobileMenuDropdownRef = useRef(null);
     const calendarDropRef = useRef(null);
+    const navigate = useNavigate();
 
     const handleMobileMenuIconClick = () => {
         mobileMenuIconRef.current.classList.toggle("active");
@@ -22,6 +23,10 @@ function Nav() {
 
     const handleCalendarClick = () => {
         calendarDropRef.current.classList.toggle("active");
+    }
+
+    const handleSignOut = () => {
+        navigate("/signin");
     }
 
     return (
@@ -46,6 +51,7 @@ function Nav() {
                     <li>
                         <Link to="/settings" onClick={() => handleLinkClick("Settings")}><i className="fa-solid fa-user"></i>Profile Management</Link>
                     </li>
+                    <button onClick={handleSignOut}>Sign Out</button>
                 </ul>
             </nav>
             {/* <Routes>

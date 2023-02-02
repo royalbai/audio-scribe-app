@@ -3,12 +3,6 @@
         width: 70%;
     }
 
-    header {
-        img {
-            width: 10%;
-        }
-    }
-
     .navHeader {
         display: none;
     }
@@ -51,6 +45,12 @@
                 background-color: #006151;
                 color: white;
             }
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
         }
     }
 

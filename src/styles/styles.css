@@ -397,7 +397,7 @@ header {
 header img {
   padding: 10px 0;
   margin-left: 5%;
-  width: 50%;
+  width: 200px;
 }
 
 .navHeader {
@@ -481,6 +481,11 @@ header img {
 .mobileNav.active a:hover, .mobileNav.active a:focus {
   background-color: #006151;
   color: white;
+}
+.mobileNav.active button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
 }
 
 .landingNav .burgerIcon {
@@ -665,9 +670,6 @@ header img {
   padding: 5px 0;
   text-align: start;
 }
-.journaling h5 {
-  text-align: center;
-}
 
 .buttonContainer {
   display: flex;
@@ -783,9 +785,6 @@ footer {
   .wrapper {
     width: 70%;
   }
-  header img {
-    width: 10%;
-  }
   .navHeader {
     display: none;
   }
@@ -821,6 +820,11 @@ footer {
   .mobileNav a:hover, .mobileNav a:focus {
     background-color: #006151;
     color: white;
+  }
+  .mobileNav button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
   }
   .landingNav .burgerIcon {
     margin-right: 5%;
