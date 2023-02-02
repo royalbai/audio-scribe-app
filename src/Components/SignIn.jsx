@@ -5,11 +5,15 @@ function SignIn() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
+
+    const handleSignIn = async () => {
+        navigate("/journaling");
+    };
     
     return (
         <div className="signIn wrapper">
             <h2>Sign in to <span>Audio Scribe</span></h2>
-            <form className="infoEntry" >
+            <form className="infoEntry" onSubmit={handleSignIn}>
                 <div>
                     <input placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} type="email" />
                 </div>
