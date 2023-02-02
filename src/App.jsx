@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route, useLocation } from "react-router-dom";
+import axios from 'axios';
 import WebPage from './Components/WebPage';
 import SignIn from "./Components/SignIn";
 import SignUp from "./Components/SignUp";
@@ -30,8 +31,8 @@ function App() {
         </div>
         <Routes>
           <Route path="/" element={<WebPage />} />
-          <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/signin" element={<SignIn />} />
           <Route path="/home" element={<Home />} />
           <Route path="/journaling" element={<Journaling />} />
           <Route path="/savednotes" element={<SavedNotes />} />

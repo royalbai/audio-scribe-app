@@ -28,6 +28,50 @@
     }
 }
 
+.buttonContainer {
+    display: flex;
+    justify-content: right;
+
+    button {
+        padding: 10px 20px;
+
+        i {
+            margin-right: 10px;
+        }
+    }
+}
+
 .transcript {
     min-height: 50vh;
+}
+
+.popup {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    width: 300px;
+    border: 1px solid #006151;
+    border-radius: 5px;
+
+    p {
+        margin-bottom: 10px;
+    }
+
+    button {
+        padding: 10px 20px;
+        width: 100%;
+        margin: 0 auto;
+        background-color: white;
+        color: #006151;
+        border: 1px solid #006151;
+
+        &:hover,
+        &:focus {
+            background-color: #006151;
+            color: white;
+        }
+    }
 }

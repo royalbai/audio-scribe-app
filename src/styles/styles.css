@@ -466,11 +466,7 @@ header img {
   padding-top: 60px;
 }
 .mobileNav.active li {
-  margin: 20px 10px;
-}
-.mobileNav.active p {
-  font-size: 1rem;
-  width: 100%;
+  margin: 20px 0;
 }
 .mobileNav.active i {
   width: 50px;
@@ -478,6 +474,7 @@ header img {
   text-align: center;
 }
 .mobileNav.active a {
+  font-size: 0.9rem;
   display: block;
   padding: 10px;
 }
@@ -672,8 +669,46 @@ header img {
   text-align: center;
 }
 
+.buttonContainer {
+  display: flex;
+  justify-content: right;
+}
+.buttonContainer button {
+  padding: 10px 20px;
+}
+.buttonContainer button i {
+  margin-right: 10px;
+}
+
 .transcript {
   min-height: 50vh;
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  width: 300px;
+  border: 1px solid #006151;
+  border-radius: 5px;
+}
+.popup p {
+  margin-bottom: 10px;
+}
+.popup button {
+  padding: 10px 20px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+  color: #006151;
+  border: 1px solid #006151;
+}
+.popup button:hover, .popup button:focus {
+  background-color: #006151;
+  color: white;
 }
 
 .settings {
@@ -773,12 +808,14 @@ footer {
     margin: 30px 0;
   }
   .mobileNav i {
-    width: 100px;
+    width: 30%;
     display: inline-block;
     text-align: center;
   }
   .mobileNav a {
-    display: block;
+    display: flex;
+    justify-content: left;
+    align-items: center;
     padding: 10px;
   }
   .mobileNav a:hover, .mobileNav a:focus {
@@ -926,6 +963,9 @@ footer {
     display: block;
     margin: 0 auto;
     padding: 20px 0;
+  }
+  .journaling .buttonContainer {
+    width: 95%;
   }
   .settings {
     width: 40%;

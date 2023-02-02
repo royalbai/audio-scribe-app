@@ -38,13 +38,13 @@ function Nav() {
             <nav className="mobileNav" ref={mobileMenuDropdownRef}>
                 <ul>
                     <li>
-                        <Link to="/journaling" onClick={() => handleLinkClick("Home")}><i className="fa-solid fa-house-chimney"></i>Home</Link>
+                        <Link to="/journaling" onClick={() => handleLinkClick("Home")}><i className="fa-solid fa-house-chimney"></i>Create New Journal</Link>
                     </li>
                     <li>
-                        <Link to="/savednotes" onClick={() => handleLinkClick("Journals")}><i className="fa-regular fa-file-lines"></i>Journals</Link>
+                        <Link to="/savednotes" onClick={() => handleLinkClick("Journals")}><i className="fa-regular fa-file-lines"></i>My Journals</Link>
                     </li>
                     <li>
-                        <Link to="/settings" onClick={() => handleLinkClick("Settings")}><i className="fa-solid fa-user"></i>Profile</Link>
+                        <Link to="/settings" onClick={() => handleLinkClick("Settings")}><i className="fa-solid fa-user"></i>Profile Management</Link>
                     </li>
                 </ul>
             </nav>
