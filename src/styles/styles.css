@@ -925,7 +925,7 @@ footer {
     margin-bottom: 5px;
   }
   .calendar .customCalendar .react-calendar__navigation__next2-button,
-.calendar .customCalendar .react-calendar__navigation__prev2-button {
+  .calendar .customCalendar .react-calendar__navigation__prev2-button {
     display: none;
   }
   .calendar .calButton {
@@ -938,11 +938,16 @@ footer {
     color: #232323;
     background-color: transparent;
     border: 1px solid #232323;
+    text-align: start;
   }
   .calendar .calButton:hover, .calendar .calButton:focus {
     background-color: #006151;
     color: white;
     border: none;
+  }
+  .calendar .calButton h2 {
+    text-align: center;
+    padding-bottom: 30px;
   }
   .webPage {
     display: flex;

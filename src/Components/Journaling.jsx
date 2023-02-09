@@ -1,52 +1,9 @@
-import React, { useState } from "react";
-import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
+import React from "react";
+import { EditText } from 'react-edit-text';
 import OnImage from "../assets/Mic-Enabled.png";
 import OffImage from "../assets/Mic-Disabled.png";
 
-function Journaling() {
-
-    const { transcript, listening, resetTranscript, isMicrophoneAvailable } = useSpeechRecognition();
-    const [isListening, setIsListening] = useState(false);
-    const [journals, setJournals] = useState([]);
-    const [title, setTitle] = useState("");
-    const [saved, setSaved] = useState("");
-    const [showPopup, setShowPopup] = useState(false);
-
-    if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
-        return <span className="notSupported">Browser does not support speech recognition</span>;
-    }
-
-    if (!isMicrophoneAvailable) {
-        return <span className="notSupported">Browser does not support microphone</span>
-    }
-
-    const toggleMic = () => {
-        if (!title) {
-            setSaved("Please add a title before transcribing!");
-            setShowPopup(true);
-            return;
-        }
-
-        if(isListening){
-            SpeechRecognition.stopListening();
-        } else {
-            SpeechRecognition.startListening({ continuous:true });
-        }
-        setIsListening(!isListening);
-    }
-
-    const saveJournal = () => {
-        if (transcript) {
-            setJournals([...journals, {title: title, text: transcript, date: new Date().toString()}]);
-            setSaved(`File name "${title}" was saved and can be viewed in the 'My Journals' tab!`)
-            resetTranscript();
-            setShowPopup(true);
-        }
-    }
-
-    const hidePopup = () => {
-        setShowPopup(false);
-    }
+function Journaling({ journals, setJournals, transcript, listening, title, setTitle, saved, showPopup, toggleMic, saveJournal, hidePopup }) {
 
     return (
         <div className="journaling wrapper">
@@ -57,7 +14,7 @@ function Journaling() {
             </div>
             <input type="text" placeholder="Untitled*" onChange={(e) => setTitle(e.target.value)} value={title} />
             <h4>{ !title ? "Add title before transcribing..." : listening ? "Transcribing..." : !transcript ? "Press the mic to start!" : transcript ? "Paused..." : "" }</h4>
-            <p className="transcript">{transcript}</p>
+            <EditText className="transcript" defaultValue={transcript}/>
             {showPopup && (
                 <div className="popup">
                     <p>{saved}</p>
@@ -71,7 +28,8 @@ function Journaling() {
                 {journals.map((journal, index) => (
                 <li key={index}>
                     <h5>{journal.title}</h5>
-                    <p>{journal.text}</p>
+                    {/* <p>{journal.text}</p> */}
+                    <EditText defaultValue={journal.text}/>
                     <p>🚀 {journal.date}</p>
                 </li>
                 ))}
