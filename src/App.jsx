@@ -74,26 +74,6 @@ function App() {
         setShowPopup(false);
     }
 
-    // const displayJournal = () => {
-    //   return (
-    //     <>
-    //       <ul>
-    //         {journals.map((journal, index) => (
-    //         <li key={index}>
-    //             <h5>{journal.title}</h5>
-    //             <p>{journal.text}</p>
-    //             <p>🚀 {journal.date}</p>
-    //         </li>
-    //         ))}
-    //       </ul>
-    //     </>
-    //   )
-    // }
-
-    // const titleProp = (e) => {
-    //   return setTitle(e.target.value);
-    // }
-
   return (
     <div>
       <div className="App">
