@@ -670,9 +670,6 @@ header img {
   margin: 0 auto;
   cursor: pointer;
 }
-.journaling li {
-  padding: 10px 0;
-}
 .journaling h4 {
   margin: 20px 0;
   padding: 5px 0;
@@ -685,6 +682,7 @@ header img {
 }
 .buttonContainer button {
   padding: 10px 20px;
+  margin-bottom: 20px;
 }
 .buttonContainer button i {
   margin-right: 10px;
@@ -692,6 +690,7 @@ header img {
 
 .transcript {
   min-height: 50vh;
+  word-break: break-all;
 }
 
 .popup {
@@ -719,6 +718,31 @@ header img {
 .popup button:hover, .popup button:focus {
   background-color: #006151;
   color: white;
+}
+
+.saved h3 {
+  border-bottom: 1px solid black;
+}
+.saved li {
+  padding: 20px 0;
+}
+.saved h5 {
+  font-size: 1.2rem;
+}
+
+.editContainer {
+  margin: 10px 0;
+}
+.editContainer button {
+  padding: 5px;
+  color: #006151;
+  background-color: transparent;
+}
+.editContainer div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  word-break: break-all;
 }
 
 .settings {
@@ -962,12 +986,30 @@ footer {
   .webPage div {
     width: 30%;
   }
-  .journaling {
+  .journaling,
+  .settings,
+  .saved {
     width: 40%;
     background-color: white;
     min-height: 1000px;
     border-left: 2px solid lightgray;
     border-right: 2px solid lightgray;
+  }
+  .journaling h3, .journaling li,
+  .settings h3,
+  .settings li,
+  .saved h3,
+  .saved li {
+    padding: 10px 0;
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  .journaling form,
+  .settings form,
+  .saved form {
+    margin-left: 80px;
   }
   .journaling input {
     padding: 10px 0;
@@ -975,7 +1017,7 @@ footer {
     display: block;
     margin: 0 auto;
   }
-  .journaling h4, .journaling h5, .journaling p {
+  .journaling h4, .journaling h5, .journaling .transcript {
     width: 90%;
     display: block;
     margin: 0 auto;
@@ -983,28 +1025,5 @@ footer {
   }
   .journaling .buttonContainer {
     width: 95%;
-  }
-  .settings {
-    width: 40%;
-    background-color: white;
-    min-height: 1000px;
-    border-left: 2px solid lightgray;
-    border-right: 2px solid lightgray;
-  }
-  .settings h3 {
-    padding: 10px 0;
-    width: 90%;
-    display: block;
-    margin: 0 auto;
-  }
-  .settings form {
-    margin-left: 80px;
-  }
-  .saved {
-    width: 40%;
-    background-color: white;
-    min-height: 1000px;
-    border-left: 2px solid lightgray;
-    border-right: 2px solid lightgray;
   }
 }/*# sourceMappingURL=styles.css.map */

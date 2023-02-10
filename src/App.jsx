@@ -52,7 +52,7 @@ function App() {
     const saveJournal = (event) => {
         event.preventDefault();
         if (transcript) {
-            setJournals([...journals, {title: title, text: transcript, date: new Date().toString()}]);
+            setJournals([...journals, {title: title, text: transcript, date: new Date().toDateString(), time: new Date().toLocaleTimeString()}]);
             setSaved(`File name "${title}" was saved and can be viewed in the 'My Journals' tab!`)
             resetTranscript();
             setShowPopup(true);
@@ -128,7 +128,7 @@ function App() {
               hidePopup={hidePopup}
             />} 
           />
-          <Route path="/savednotes" element={<SavedNotes />} />
+          <Route path="/savednotes" element={<SavedNotes journals={journals} />} />
           <Route path="/settings" element={<Settings />} />
         </Routes>
       </div>

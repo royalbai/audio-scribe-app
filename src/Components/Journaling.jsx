@@ -3,7 +3,7 @@ import { EditText } from 'react-edit-text';
 import OnImage from "../assets/Mic-Enabled.png";
 import OffImage from "../assets/Mic-Disabled.png";
 
-function Journaling({ journals, setJournals, transcript, listening, title, setTitle, saved, showPopup, toggleMic, saveJournal, hidePopup }) {
+function Journaling({ transcript, listening, title, setTitle, saved, showPopup, toggleMic, saveJournal, hidePopup }) {
 
     return (
         <div className="journaling wrapper">
@@ -13,8 +13,8 @@ function Journaling({ journals, setJournals, transcript, listening, title, setTi
                 </button>
             </div>
             <input type="text" placeholder="Untitled*" onChange={(e) => setTitle(e.target.value)} value={title} />
-            <h4>{ !title ? "Add title before transcribing..." : listening ? "Transcribing..." : !transcript ? "Press the mic to start!" : transcript ? "Paused..." : "" }</h4>
-            <EditText className="transcript" defaultValue={transcript}/>
+            <h4>{ !title ? "Add title before transcribing..." : listening ? "Transcribing..." : !transcript ? "Press the mic to start!" : transcript ? "Paused... Click to edit" : "" }</h4>
+            <EditText className="transcript" inputClassName="transcript" defaultValue={transcript}/>
             {showPopup && (
                 <div className="popup">
                     <p>{saved}</p>
@@ -24,16 +24,6 @@ function Journaling({ journals, setJournals, transcript, listening, title, setTi
             <div onClick={toggleMic}>
                 {listening ? <img src={OnImage} alt="" /> : <img src={OffImage} alt="" /> }
             </div>
-            <ul>
-                {journals.map((journal, index) => (
-                <li key={index}>
-                    <h5>{journal.title}</h5>
-                    {/* <p>{journal.text}</p> */}
-                    <EditText defaultValue={journal.text}/>
-                    <p>🚀 {journal.date}</p>
-                </li>
-                ))}
-            </ul>
         </div>
     );
 };
