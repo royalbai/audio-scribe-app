@@ -178,6 +178,7 @@
             color: #232323;
             background-color: transparent;
             border: 1px solid #232323;
+            text-align: start;
 
             &:hover,
             &:focus {
@@ -185,6 +186,13 @@
                 color: white;
                 border: none;
             }
+
+            h2 {
+                text-align: center;
+                padding-bottom: 30px;
+            }
+
+
         }
     }
 
@@ -203,13 +211,29 @@
         }
     }
 
-    .journaling {
+    .journaling,
+    .settings,
+    .saved {
         width: 40%;
         background-color: white;
         min-height: 1000px;
         border-left: 2px solid lightgray;
         border-right: 2px solid lightgray;
 
+        h3, li {
+            padding: 10px 0;
+            width: 90%;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+        
+        form {
+            margin-left: 80px;
+        }
+    }
+
+    .journaling {
         input {
             padding: 10px 0;
             width: 90%;
@@ -217,7 +241,7 @@
             margin: 0 auto;
         }
 
-        h4, h5, p {
+        h4, h5, .transcript {
             width: 90%;
             display: block;
             margin: 0 auto;
@@ -229,31 +253,4 @@
         }
     }
 
-    .settings {
-        width: 40%;
-        background-color: white;
-        min-height: 1000px;
-        border-left: 2px solid lightgray;
-        border-right: 2px solid lightgray;
-        
-        h3 {
-                padding: 10px 0;
-                width: 90%;
-                display: block;
-                margin: 0 auto;
-        }
-
-        form {
-            margin-left: 80px;
-        }
-    }
-
-    .saved {
-        width: 40%;
-        background-color: white;
-        min-height: 1000px;
-        border-left: 2px solid lightgray;
-        border-right: 2px solid lightgray;
-    }
 }
-

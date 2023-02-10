@@ -16,8 +16,13 @@ function CustomCalendar({calendarDrop}) {
                 value={date}
                 className="customCalendar"
             />
-            <button className='calButton'>Connect Gmail Calendar</button>
-            <button className='calButton'>Troubleshoot</button>
+            <button className='calButton'><h2>Available on:</h2>
+                            <li>Chrome Desktop (Best)</li>
+                            <li>Safari 14.1</li>
+                            <li>Microsoft Edge</li>
+                            <li>Android webview</li>
+                            <li>Samsung Internet</li>
+            </button>
         </div>
     );
 }
