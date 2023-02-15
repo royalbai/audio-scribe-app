@@ -1,5 +1,5 @@
 import React from "react";
-import { EditText } from 'react-edit-text';
+import { EditText, EditTextarea } from 'react-edit-text';
 
 function SavedNotes({ journals }) {
 

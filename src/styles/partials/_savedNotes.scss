@@ -1,6 +1,6 @@
 .saved {
     h3 {
-            border-bottom: 1px solid black;
+        border-bottom: 1px solid black;
         }
 
     li {
@@ -26,5 +26,9 @@
         justify-content: space-between;
         align-items: center;
         word-break: break-all;
+    }
+
+    input {
+        width: 100%;
     }
 }

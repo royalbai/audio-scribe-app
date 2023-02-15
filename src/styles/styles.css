@@ -675,6 +675,9 @@ header img {
   padding: 5px 0;
   text-align: start;
 }
+.journaling textarea {
+  width: 100%;
+}
 
 .buttonContainer {
   display: flex;
@@ -743,6 +746,9 @@ header img {
   justify-content: space-between;
   align-items: center;
   word-break: break-all;
+}
+.editContainer input {
+  width: 100%;
 }
 
 .settings {
