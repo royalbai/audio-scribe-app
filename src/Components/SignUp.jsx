@@ -1,32 +1,8 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
+import React from "react";
+import { Link } from "react-router-dom";
 
-
-function SignUp() {
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const navigate = useNavigate();
-
-    const handleSignUp = (event) => {
-        // event.preventDefault();
-        // axios.post("https://audioscribe.fly.dev/signup", {
-        //     user: {
-        //         first_name: firstName,
-        //         last_name: lastName,
-        //         email: email,
-        //         password: password,
-        //     },
-        // }).then((res) => {
-        //     navigate("/journaling");
-        //     console.log(res);
-        // }).catch((err) => {
-        //     setError(err.response.data.error);
-        // });
-        navigate("/journaling");
-    };
+function SignUp({ handleSignUp, firstName, setFirstName, lastName, setLastName, email, setEmail, password, setPassword, error }) {
+    
 
     return (
         <div className="signUp wrapper">
@@ -48,6 +24,7 @@ function SignUp() {
             </form>
             <p>Already have an account? <Link to="/signin">Sign in</Link></p>
             <p>By signing-up with Joice you agree to the <span>Terms of Service and Privacy Policy.</span></p>
+            <p>{error}</p>
         </div>
     );
 };

@@ -1,27 +1,7 @@
-import React, { useState } from "react";
-import { Link, useNavigate} from "react-router-dom";
-import axios from "axios";
+import React from "react";
+import { Link} from "react-router-dom";
 
-function SignIn() {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const navigate = useNavigate();
-
-    const handleSignIn = (event) => {
-        // event.preventDefault();
-        // axios.post("https://audioscribe.fly.dev/login", {
-        //     user: {
-        //         email: email,
-        //         password: password,
-        //     },
-        // }).then((res) => {
-        //     navigate("/journaling");
-        //     console.log(res);
-        // }).catch((err) => {
-        //     setError(err.response.data.error);
-        // })
-        navigate("/journaling");
-    }
+function SignIn({ handleSignIn, email, setEmail, password, setPassword, error }) {
     
     return (
         <div className="signIn wrapper">
@@ -37,6 +17,7 @@ function SignIn() {
                 <button type="submit">Sign In</button>
             </form>
             <p>Or <Link to="/signup">Create Account</Link></p>
+            <p>{error}</p>
         </div>
     );
 };

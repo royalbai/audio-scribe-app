@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import SpeechRecognition, { useSpeechRecognition } from "react-speech-recognition";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import axios from 'axios';
 import WebPage from './Components/WebPage';
 import SignIn from "./Components/SignIn";
@@ -18,61 +18,108 @@ import Logo from "./assets/Logo.png"
 
 function App() {
   const location = useLocation();
+  const { transcript, listening, resetTranscript, isMicrophoneAvailable } = useSpeechRecognition();
+  const [isListening, setIsListening] = useState(false);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [data, setData] = useState({});
+  const [title, setTitle] = useState("");
+  const [saved, setSaved] = useState("");
+  const [error, setError] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
+  const navigate = useNavigate();
 
-    const { transcript, listening, resetTranscript, isMicrophoneAvailable } = useSpeechRecognition();
-    const [isListening, setIsListening] = useState(false);
-    const [journals, setJournals] = useState([]);
-    const [title, setTitle] = useState("");
-    const [saved, setSaved] = useState("");
-    const [showPopup, setShowPopup] = useState(false);
 
-    if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
-        return <span className="notSupported">Browser does not support speech recognition</span>;
-    }
 
-    if (!isMicrophoneAvailable) {
-        return <span className="notSupported">Browser does not support microphone</span>
-    }
+  if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
+      return <span className="notSupported">Browser does not support speech recognition</span>;
+  }
 
-    const toggleMic = () => {
-        if (!title) {
-            setSaved("Please add a title before transcribing!");
-            setShowPopup(true);
-            return;
+  if (!isMicrophoneAvailable) {
+      return <span className="notSupported">Browser does not support microphone</span>
+  }
+
+  const handleSignUp = (event) => {
+      event.preventDefault();
+      axios.post("https://audioscribe.fly.dev/signup", {
+          user: {
+              first_name: firstName,
+              last_name: lastName,
+              email: email,
+              password: password,
+          },
+      }).then((res) => {
+          navigate("/journaling");
+          setData(res.data);
+          console.log(res.data);
+      }).catch((err) => {
+          setError(err.response.data.error);
+      });
+  }
+
+  const handleSignIn = (event) => {
+      event.preventDefault();
+      axios.post("https://audioscribe.fly.dev/login", {
+          user: {
+              email: email,
+              password: password,
+          },
+      }).then((res) => {
+          navigate("/journaling");
+          setData(res.data);
+          console.log(res.data);
+      }).catch((err) => {
+          setError(err.response.data.error);
+      })
+  }
+
+  const toggleMic = () => {
+      if (!title) {
+          setSaved("Please add a title before transcribing!");
+          setShowPopup(true);
+          return;
+      }
+
+      if(isListening){
+          SpeechRecognition.stopListening();
+      } else {
+          SpeechRecognition.startListening({ continuous:true });
+      }
+      setIsListening(!isListening);
+  }
+
+  const saveJournal = (event) => {
+    event.preventDefault();
+    if (transcript) {
+      const newJournal = {title: title, text: transcript, date: new Date().toDateString(), time: new Date().toLocaleTimeString()};
+      
+
+      axios.post(`https://audioscribe.fly.dev/api/v1/voices?user_id=${data.user.id}`, {
+        voice: {
+          file_name: newJournal.title,
+          voice_file: newJournal.text,
+          date: newJournal.date.time
         }
-
-        if(isListening){
-            SpeechRecognition.stopListening();
-        } else {
-            SpeechRecognition.startListening({ continuous:true });
+      }, {
+        headers: {
+          Authorization: `Bearer ${data.token}`
         }
-        setIsListening(!isListening);
+      }).then((res) => {
+        console.log(res);
+        setSaved(`File name "${title}" was saved and can be viewed in the 'My Journals' tab!`);
+        resetTranscript();
+        setShowPopup(true);
+      }).catch((err) => {
+        setError(err.response.data.error);
+      });
     }
+  }
 
-    const saveJournal = (event) => {
-        event.preventDefault();
-        if (transcript) {
-            setJournals([...journals, {title: title, text: transcript, date: new Date().toDateString(), time: new Date().toLocaleTimeString()}]);
-            setSaved(`File name "${title}" was saved and can be viewed in the 'My Journals' tab!`)
-            resetTranscript();
-            setShowPopup(true);
-        }
-        // axios.post("https://audioscribe.fly.dev/api/v1/voices/1", {
-        //     voice: {
-        //         file_name: journals.title,
-        //         voice_file: journals.text,
-        //         date: journals.date
-        //     }
-        // }).then((res) => {
-        //     console.log(res);
-        // }).catch((err) => {
-        //     setError(err.response.data.error);
-        // });
-    }
-
-    const hidePopup = () => {
-        setShowPopup(false);
-    }
+  const hidePopup = () => {
+      setShowPopup(false);
+  }
 
   return (
     <div>
@@ -89,14 +136,31 @@ function App() {
           <Route path="/" element={<WebPage />} />
           <Route path="/signup" 
             element={<SignUp 
+              handleSignUp={handleSignUp}
+              firstName={firstName}
+              setFirstName={setFirstName}
+              lastName={lastName}
+              setLastName={setLastName}
+              email={email}
+              setEmail={setEmail}
+              password={password}
+              setPassword={setPassword}
+              error={error}
             />} 
           />
-          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signin" 
+            element={<SignIn 
+              handleSignIn={handleSignIn}
+              email={email}
+              setEmail={setEmail}
+              password={password}
+              setPassword={setPassword}
+              error={error}
+              />} 
+            />
           <Route path="/home" element={<Home />} />
           <Route path="/journaling/" 
             element={<Journaling 
-              journals={journals} 
-              setJournals={setJournals}
               transcript={transcript}
               listening={listening}
               title={title}
@@ -108,7 +172,7 @@ function App() {
               hidePopup={hidePopup}
             />} 
           />
-          <Route path="/savednotes" element={<SavedNotes journals={journals} />} />
+          <Route path="/savednotes" element={<SavedNotes data={data} />} />
           <Route path="/settings" element={<Settings />} />
         </Routes>
       </div>

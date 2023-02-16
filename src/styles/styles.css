@@ -706,6 +706,7 @@ header img {
   width: 300px;
   border: 1px solid #006151;
   border-radius: 5px;
+  z-index: 50;
 }
 .popup p {
   margin-bottom: 10px;
